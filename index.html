@@ -25,780 +25,562 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav
-  class="py-5 border-b-default bg-white border-solid border-gray-200 z-10 w-full bg-inherit "
-  id="topnav"
+  <nav class="py-5 border-b-default bg-white border-solid border-gray-200 z-10 w-full bg-inherit" id="topnav">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="w-full flex flex-col lg:flex-row">
+        <!-- Logo and Hamburger Menu (Mobile) -->
+        <div class="flex justify-between items-center px-4 lg:hidden">
+          <!-- Logo -->
+          <a href="https://www.sailsmakr.com" class="flex items-center">
+            <img src="./src/img/apple-touch-icon.png" alt="sailsmakr logo" class="w-10 h-10 lg:w-12 lg:h-12">
+          </a>
+  
+          <!-- Hamburger Menu -->
+          <button
+            data-collapse-toggle="navbar"
+            type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Ouvrir le menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden w-full lg:flex justify-between max-lg:bg-white py-5 max-lg:mt-1 max-lg:px-4 max-lg:shadow-lg max-lg:shadow-gray-200 max-lg:h-auto max-lg:overflow-auto transition-all duration-500 delay-200" id="navbar">
+          <!-- Logo for Desktop -->
+          <a href="https://www.sailsmakr.com" class="flex items-center mr-6">
+            <img src="./src/img/apple-touch-icon.png" alt="sailsmakr logo" class="w-10 h-10 lg:w-12 lg:h-12">
+          </a>
+  
+          <!-- Navigation Links -->
+          <ul class="flex lg:items-center max-lg:gap-4 max-lg:mb-4 flex-col mt-4 lg:flex-1 md:mt-0 lg:flex-row">
+            <li>
+              <a
+                href="index.html"
+                class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
+              >
+                Accueil
+              </a>
+            </li>
+            <li>
+              <a
+                href="pricing.html"
+                class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
+              >
+                Tarification
+              </a>
+            </li>
+            <li>
+              <a
+                href="javascript:;"
+                class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
+              >
+                Equipe
+              </a>
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
+              >
+                A propos
+              </a>
+            </li>
+          </ul>
+  
+          <!-- Login and Signup Buttons -->
+          <div class="flex lg:items-center justify-start flex-col lg:flex-row max-lg:gap-4 lg:flex-1 lg:justify-end">
+            <a
+              href="https://www.sailsmakr.com/auth/login"
+              class="bg-indigo-50 text-indigo-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm hover:bg-indigo-100"
+            >
+              Se connecter
+            </a>
+            <a
+              href="https://www.sailsmakr.com/auth/register/company"
+              class="bg-indigo-600 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:ml-5 hover:bg-indigo-700"
+            >
+              Créer un compte
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section
+    class="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover"
   >
-  <div class="mx-auto max-w-7xl  lg:px-8">
-    <div class="w-full flex flex-col lg:flex-row">
-      <div class="flex justify-between lg:hidden px-4">
-        <a href="https://www.sailsmakr.com" class="flex items-center">
-          <img src="./src/img/apple-touch-icon.png" alt="sailsmakr logo">
-        </a>
-        <button
-          data-collapse-toggle="navbar"
-          type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          aria-controls="navbar-default"
-          aria-expanded="false"
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
+      <div class="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4">
+        <span class="text-xs text-gray-900 ml-2">Découvrer notre guide utilisateur</span>
+        <a
+          href="javascript:;"
+          class="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
         >
-          <span class="sr-only">Ouvrir le menu</span>
           <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
+            width="17"
+            height="16"
+            viewBox="0 0 17 16"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
+              d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
+              stroke="white"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
-        </button>
-      </div>
-      <div class="hidden w-full lg:flex justify-between max-lg:bg-white py-5 max-lg:mt-1 max-lg:px-4 max-lg:shadow-lg max-lg:shadow-gray-200 max-lg:h-auto max-lg:overflow-auto transition-all duration-500 delay-200 " id="navbar">
-        <ul
-          class="flex lg:items-center max-lg:gap-4 max-lg:mb-4 flex-col mt-4 lg:flex-1 md:mt-0 lg:flex-row"
-        >
-          <li>
-            <a
-              href="index.html"
-              class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
-              >
-              Accueil
-            </a>
-          </li>
-          <li>
-            <a
-            href="pricing.html"
-              class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
-              >
-              Tarification
-            </a>
-          </li>
-          <li>
-            <a
-              href=""
-              href="javascript:;"
-              class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
-              >Equipe</a
-            >
-          </li>
-          <li>
-            <a
-              href="about.html"
-              class="text-gray-500 text-sm font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 block lg:mr-6 lg:text-base md:mb-0 md:mr-3 hover:text-gray-900"
-              >A propos</a
-            >
-          </li>
-          <!--
-          <li class="relative">
-            <div class="dropdown relative inline-flex">
-              <button
-                type="button"
-                data-target="dropdown-feature"
-                class="dropdown-toggle flex items-center justify-between text-gray-500 text-sm max-lg:h-max text-center lg:text-base font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left lg:m-0 hover:text-gray-900"
-              >
-                Fonctionnalités
-                <svg
-                  class="w-3 h-2 ml-1.5  dropdown-active-rotate-180"
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L3.58579 3.58579C4.25245 4.25245 4.58579 4.58579 5 4.58579C5.41421 4.58579 5.74755 4.25245 6.41421 3.58579L9 1"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </button>
-              <div
-                id="dropdown-feature"
-                class="dropdown-menu rounded-xl shadow-lg lg:bg-white relative lg:absolute max-lg:-left-14 max-lg:top-2 max-lg:bg-white lg:top-full lg:w-72 mt-2 hidden"
-                aria-labelledby="dropdown-feature"
-              >
-                <ul class="py-2">
-                  <li>
-                    <a
-                      class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium"
-                      href="#"
-                    >
-                      Downloads
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium"
-                      href="#"
-                    >
-                      Saved Files
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium"
-                      href="#"
-                    >
-                      Notifications
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          -->
-        </ul>
-        <a href="index.html" class="hidden lg:flex items-center">
-          <img src="./src/img/apple-touch-icon.png" alt="sailsmakr logo" width="50">
         </a>
-        <div
-          class="flex lg:items-center justify-start flex-col lg:flex-row max-lg:gap-4 lg:flex-1 lg:justify-end"
-        >
-          <a
-            href="https://www.sailsmakr.com/auth/login"
-            class="bg-indigo-50 text-indigo-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm hover:bg-indigo-100"
-          >
-            Se connecter
-          </a>
-          <a
-            href="https://www.sailsmakr.com/auth/register/company"
-            class="bg-indigo-600 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:ml-5 hover:bg-indigo-700"
-          >
-            
-            Créer un compte
-          </a>
-        </div>
       </div>
-    </div>
-  </div>
-</nav>
-<section
-  class="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover"
->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-    <div
-      class="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4"
-    >
-      <span class="font-inter text-xs font-medium text-gray-900 ml-3"
-        >Découvrer notre guide utilisateur</span
-      >
-      <a
-        href="javascript:;"
-        class="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
-      >
-        <svg
-          width="17"
-          height="16"
-          viewBox="0 0 17 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
-            stroke="white"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </a>
-    </div>
-    <h1
-      class="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]"
-    >
-      Transformer les <span class="text-indigo-600">"insights"</span> en
-      actions
-      
-    </h1>
-      <p
-        class="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9"
-      >
+      <h1 class="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
+        Transformer les <span class="text-indigo-600">"insights"</span> en actions
+      </h1>
+      <p class="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
         Optimisez vos opérations, améliorez l'efficacité, et dynamisez votre équipe avec Sailsmakr, une plateforme cloud polyvalente adaptée à tous les secteurs.
       </p>
-      <a
-        href="https://www.sailsmakr.com/auth/register/company"
-       class="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
-      >
-        Créer un compte
-      <svg
-        class="ml-2"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+    
+      <!-- Download Buttons Container -->
+      <div class="flex flex-col md:flex-row justify-center gap-3">
+        <!-- Windows Store Download Link -->
+        <a
+          href="https://www.microsoft.com/store/apps"
+          class="w-full md:w-auto inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-gray-900 shadow-xs hover:bg-gray-800 transition-all duration-500"
+        >
+          <!-- Colored Microsoft Logo SVG -->
+          <svg enable-background="new 0 0 2499.6 2500" viewBox="0 0 2499.6 2500" class="mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m1187.9 1187.9h-1187.9v-1187.9h1187.9z" fill="#f1511b"/>
+            <path d="m2499.6 1187.9h-1188v-1187.9h1187.9v1187.9z" fill="#80cc28"/>
+            <path d="m1187.9 2500h-1187.9v-1187.9h1187.9z" fill="#00adef"/>
+            <path d="m2499.6 2500h-1188v-1187.9h1187.9v1187.9z" fill="#fbbc09"/>
+          </svg>
+          Télécharger pour Windows
+        </a>
+    
+        <!-- App Store Download Link -->
+        <a
+          href="https://www.apple.com/app-store/"
+          class="w-full md:w-auto inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-gray-900 shadow-xs hover:bg-gray-800 transition-all duration-500"
+        >
+          <!-- Apple Logo SVG -->
+          <svg class="mr-2" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09999 21.97C7.78999 22 6.70999 20.68 5.87999 19.47C4.22999 17 2.93999 12.45 4.03999 9.39C4.94999 7.01 7.30999 5.44 9.71999 5.44C11.09 5.44 12.34 6.25 13.14 6.25C13.94 6.25 15.41 5.4 16.97 5.53C17.57 5.56 19.39 5.7 20.53 7.28C20.47 7.31 18.39 8.63 18.41 11.02C18.44 13.63 21.09 14.73 21.12 14.73C21.1 14.78 19.67 19.07 18.71 19.5ZM13 3.5C13.73 2.67 14.94 1.96 15.94 1.96C16.07 3.35 15.6 4.66 14.9 5.5C14.21 6.33 13.07 7.04 12.04 7C11.95 5.61 12.43 4.32 13 3.5Z"/>
+          </svg>
+          Télécharger sur l'App Store
+        </a>
+      </div>
+    
+      <div class="flex justify-center mt-8">
+        <img
+          src="./src/img/sailsmakr-integration-sales-statistics.jpeg"
+          alt="Dashboard image"
+          class="rounded-t-3xl h-auto object-cover"
         />
-      </svg>
-    </a>
-    <div class="flex justify-center">
-      <img
-        src="https://pagedone.io/asset/uploads/1691054543.png"
-        alt="Dashboard image" class="rounded-t-3xl h-auto object-cover"
-      />
+      </div>
+    </div>
+  </section>
+
+  <div class="pattern_1"></div>
+
+  <section class="py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-14 text-center">
+            <span
+                class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center"> Fonctionnalités </span>
+            <h2 class="text-4xl text-center font-bold text-gray-900 py-5">
+                Fonctionnalités Révolutionnaires
+            </h2>
+            <p class="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto">
+              Fournit des fonctionnalités avancées comme le suivi du temps,
+              l'intégration avec des applications tierces (calendrier / Google Drive), la création de sous-tâches.
+            </p>
+        </div>
+        <div
+            class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
+                    <svg class="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 27.5L15 25M15 25V21.25M15 25L20 27.5M8.75 14.375L12.5998 11.0064C13.1943 10.4862 14.1163 10.6411 14.5083 11.327L15.4917 13.048C15.8837 13.7339 16.8057 13.8888 17.4002 13.3686L21.25 10M2.5 2.5H27.5M26.25 2.5V13.25C26.25 17.0212 26.25 18.9069 25.0784 20.0784C23.9069 21.25 22.0212 21.25 18.25 21.25H11.75C7.97876 21.25 6.09315 21.25 4.92157 20.0784C3.75 18.9069 3.75 17.0212 3.75 13.25V2.5"
+                            stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                  Gestion des Stocks
+                </h4>
+                <p class="text-sm font-normal text-gray-500">
+                  Gardez un inventaire précis, suivez les expéditions et optimisez la logistique.
+                </p>
+            </div>
+            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
+                    <svg class="stroke-pink-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.5 7.5C2.5 4.73858 4.73858 2.5 7.5 2.5C10.2614 2.5 12.5 4.73858 12.5 7.5C12.5 10.2614 10.2614 12.5 7.5 12.5C4.73858 12.5 2.5 10.2614 2.5 7.5Z"
+                            stroke="" stroke-width="2"></path>
+                        <path
+                            d="M2.5 22.5C2.5 20.143 2.5 18.9645 3.23223 18.2322C3.96447 17.5 5.14298 17.5 7.5 17.5C9.85702 17.5 11.0355 17.5 11.7678 18.2322C12.5 18.9645 12.5 20.143 12.5 22.5C12.5 24.857 12.5 26.0355 11.7678 26.7678C11.0355 27.5 9.85702 27.5 7.5 27.5C5.14298 27.5 3.96447 27.5 3.23223 26.7678C2.5 26.0355 2.5 24.857 2.5 22.5Z"
+                            stroke="" stroke-width="2"></path>
+                        <path
+                            d="M17.5 7.5C17.5 5.14298 17.5 3.96447 18.2322 3.23223C18.9645 2.5 20.143 2.5 22.5 2.5C24.857 2.5 26.0355 2.5 26.7678 3.23223C27.5 3.96447 27.5 5.14298 27.5 7.5C27.5 9.85702 27.5 11.0355 26.7678 11.7678C26.0355 12.5 24.857 12.5 22.5 12.5C20.143 12.5 18.9645 12.5 18.2322 11.7678C17.5 11.0355 17.5 9.85702 17.5 7.5Z"
+                            stroke="" stroke-width="2"></path>
+                        <path
+                            d="M17.5 22.5C17.5 19.7386 19.7386 17.5 22.5 17.5C25.2614 17.5 27.5 19.7386 27.5 22.5C27.5 25.2614 25.2614 27.5 22.5 27.5C19.7386 27.5 17.5 25.2614 17.5 22.5Z"
+                            stroke="" stroke-width="2"></path>
+                    </svg>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                  Intégration Transparentes
+                </h4>
+                <p class="text-sm font-normal text-gray-500">
+                  S'intègre facilement aux systèmes de gestion existants.
+                </p>
+            </div>
+            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
+                    <svg class="stroke-teal-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.75 26.25H26.25M6.25 22.875C4.86929 22.875 3.75 21.8676 3.75 20.625V12.75C3.75 11.5074 4.86929 10.5 6.25 10.5C7.63071 10.5 8.75 11.5074 8.75 12.75V20.625C8.75 21.8676 7.63071 22.875 6.25 22.875ZM15 22.875C13.6193 22.875 12.5 21.8676 12.5 20.625V9.375C12.5 8.13236 13.6193 7.125 15 7.125C16.3807 7.125 17.5 8.13236 17.5 9.375V20.625C17.5 21.8676 16.3807 22.875 15 22.875ZM23.75 22.875C22.3693 22.875 21.25 21.8676 21.25 20.625V6C21.25 4.75736 22.3693 3.75 23.75 3.75C25.1307 3.75 26.25 4.75736 26.25 6V20.625C26.25 21.8676 25.1307 22.875 23.75 22.875Z"
+                            stroke="" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                  Tableau de Bord Revendeurs
+                </h4>
+                <p class="text-sm font-normal text-gray-500">
+                  Offrez à vos revendeurs un tableau de bord pour gérer les produits,
+                  les ventes et les commandes.
+                </p>
+            </div>
+            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
+                    <svg class="stroke-orange-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.4167 12.0833V21.25M5.41667 21.25V20.8333C5.41667 19.262 5.41667 18.4763 5.90482 17.9882C6.39298 17.5 7.17865 17.5 8.75 17.5H22.0833C23.6547 17.5 24.4404 17.5 24.9285 17.9882C25.4167 18.4763 25.4167 19.262 25.4167 20.8333V21.25M15.4167 9.16667C13.8453 9.16667 13.0596 9.16667 12.5715 8.67851C12.0833 8.19036 12.0833 7.40468 12.0833 5.83333C12.0833 4.26198 12.0833 3.47631 12.5715 2.98816C13.0596 2.5 13.8453 2.5 15.4167 2.5C16.988 2.5 17.7737 2.5 18.2618 2.98816C18.75 3.47631 18.75 4.26198 18.75 5.83333C18.75 7.40468 18.75 8.19036 18.2618 8.67851C17.7737 9.16667 16.988 9.16667 15.4167 9.16667ZM7.08333 25.8333C7.08333 26.7538 6.33714 27.5 5.41667 27.5C4.49619 27.5 3.75 26.7538 3.75 25.8333C3.75 24.9129 4.49619 24.1667 5.41667 24.1667C6.33714 24.1667 7.08333 24.9129 7.08333 25.8333ZM17.0833 25.8333C17.0833 26.7538 16.3371 27.5 15.4167 27.5C14.4962 27.5 13.75 26.7538 13.75 25.8333C13.75 24.9129 14.4962 24.1667 15.4167 24.1667C16.3371 24.1667 17.0833 24.9129 17.0833 25.8333ZM27.0833 25.8333C27.0833 26.7538 26.3371 27.5 25.4167 27.5C24.4962 27.5 23.75 26.7538 23.75 25.8333C23.75 24.9129 24.4962 24.1667 25.4167 24.1667C26.3371 24.1667 27.0833 24.9129 27.0833 25.8333Z"
+                            stroke="" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                  Excel Alimenté par l'IA
+                </h4>
+                <p class="text-sm font-normal text-gray-500">
+                  Analysez les données et générez des rapports automatiquement.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <div class="pattern_2"></div>
+  <!---- API INTEGRATION---->
+  <section class="py-24 relative">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full flex-col justify-start items-center lg:gap-11 gap-7 inline-flex">
+            <div class="w-full justify-between items-center lg:gap-12 gap-7 flex md:flex-row flex-col">
+                <div class="flex-col justify-center md:items-start items-center gap-2.5 inline-flex">
+                    <h2 class="text-gray-900 text-3xl font-bold font-manrope leading-normal">Intégration API</h2>
+                    <p class="text-gray-500 text-base font-normal leading-relaxed md:text-start text-center">Sailsmakr offre une API robuste permettant une intégration fluide avec vos systèmes existants, 
+                      vous garantissant une connectivité et une automatisation de bout en bouts.</p>
+                </div>
+                <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-xl shadow justify-center items-center flex">
+                    <span class="px-2 py-px text-white text-base font-semibold leading-relaxed whitespace-nowrap">TOUTES LES INTEGRATIONS</span>
+                    <div class="w-5 h-5 relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4.5845 4.99988L9.5847 10.0001L4.58154 15.0032M10.4178 4.99988L15.418 10.0001L10.4149 15.0032" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+            <div class="w-full justify-start items-center gap-6 flex md:flex-row flex-col">
+                <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <g clip-path="url(#clip0_30847_81934)">
+                              <path d="M7.71003 22.6772C7.71003 24.7464 6.03759 26.4189 3.96829 26.4189C1.899 26.4189 0.226562 24.7464 0.226562 22.6772C0.226562 20.6079 1.899 18.9354 3.96829 18.9354H7.71003V22.6772ZM9.58089 22.6772C9.58089 20.6079 11.2533 18.9354 13.3226 18.9354C15.3919 18.9354 17.0644 20.6079 17.0644 22.6772V32.0315C17.0644 34.1008 15.3919 35.7732 13.3226 35.7732C11.2533 35.7732 9.58089 34.1008 9.58089 32.0315V22.6772Z" fill="#E01E5A"/>
+                              <path d="M13.3227 7.65351C11.2534 7.65351 9.58092 5.98107 9.58092 3.91178C9.58092 1.84248 11.2534 0.170044 13.3227 0.170044C15.3919 0.170044 17.0644 1.84248 17.0644 3.91178V7.65351H13.3227ZM13.3227 9.55272C15.3919 9.55272 17.0644 11.2252 17.0644 13.2945C17.0644 15.3637 15.3919 17.0362 13.3227 17.0362H3.93997C1.87068 17.0362 0.198242 15.3637 0.198242 13.2945C0.198242 11.2252 1.87068 9.55272 3.93997 9.55272H13.3227Z" fill="#36C5F0"/>
+                              <path d="M28.3182 13.2945C28.3182 11.2252 29.9906 9.55272 32.0599 9.55272C34.1292 9.55272 35.8017 11.2252 35.8017 13.2945C35.8017 15.3637 34.1292 17.0362 32.0599 17.0362H28.3182V13.2945ZM26.4473 13.2945C26.4473 15.3637 24.7749 17.0362 22.7056 17.0362C20.6363 17.0362 18.9639 15.3637 18.9639 13.2945V3.91178C18.9639 1.84248 20.6363 0.170044 22.7056 0.170044C24.7749 0.170044 26.4473 1.84248 26.4473 3.91178V13.2945Z" fill="#2EB67D"/>
+                              <path d="M22.7056 28.2898C24.7749 28.2898 26.4473 29.9622 26.4473 32.0315C26.4473 34.1008 24.7749 35.7732 22.7056 35.7732C20.6363 35.7732 18.9639 34.1008 18.9639 32.0315V28.2898H22.7056ZM22.7056 26.4189C20.6363 26.4189 18.9639 24.7464 18.9639 22.6772C18.9639 20.6079 20.6363 18.9354 22.7056 18.9354H32.0883C34.1576 18.9354 35.83 20.6079 35.83 22.6772C35.83 24.7464 34.1576 26.4189 32.0883 26.4189H22.7056Z" fill="#ECB22E"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_30847_81934">
+                                <rect width="36" height="36" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Slack</h5>
+                </div>
+                <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36" fill="none">
+                            <g clip-path="url(#clip0_30847_81937)">
+                              <path d="M33.1355 14.7939L33.091 14.6752L28.5983 2.95603C28.5073 2.72592 28.3454 2.53072 28.1363 2.39868C27.9801 2.29873 27.8027 2.23675 27.6183 2.21771C27.434 2.19866 27.2477 2.22308 27.0743 2.289C26.9012 2.35493 26.7456 2.46053 26.6206 2.59734C26.4956 2.73415 26.4042 2.89837 26.354 3.07683L23.3214 12.3611H11.0406L8.00804 3.07683C7.95745 2.89864 7.86595 2.73473 7.74079 2.59818C7.61562 2.46163 7.46029 2.35622 7.28715 2.29035C7.11403 2.22447 6.92792 2.19996 6.74364 2.21877C6.55937 2.23758 6.38204 2.29919 6.22579 2.39868C6.01656 2.53072 5.85473 2.72592 5.7638 2.95603L1.27321 14.6774L1.22659 14.7939C0.580075 16.4836 0.500427 18.3376 0.999653 20.0765C1.49888 21.8154 2.54991 23.3449 3.99428 24.4341L4.01124 24.4469L4.04936 24.4765L10.8838 29.5986L14.2745 32.1608L16.3344 33.7184C16.5761 33.9011 16.8707 33.9998 17.1736 33.9998C17.4765 33.9998 17.7711 33.9011 18.0128 33.7184L20.0727 32.1608L23.4634 29.5986L30.3466 24.4469L30.3657 24.432C31.8099 23.3432 32.861 21.8141 33.3607 20.0757C33.8602 18.3372 33.7812 16.4835 33.1355 14.7939Z" fill="#E24329"/>
+                              <path d="M33.1357 14.7935L33.0912 14.6748C30.9022 15.124 28.8396 16.0517 27.0514 17.3916L17.1865 24.8512L23.4678 29.5982L30.351 24.4464L30.3701 24.4316C31.8137 23.3421 32.864 21.8129 33.3628 20.0745C33.8615 18.3361 33.7818 16.4826 33.1357 14.7935Z" fill="#FC6D26"/>
+                              <path d="M10.8843 29.5986L14.275 32.1607L16.3349 33.7183C16.5766 33.901 16.8712 33.9997 17.1741 33.9997C17.477 33.9997 17.7716 33.901 18.0133 33.7183L20.0732 32.1607L23.4639 29.5986L17.1826 24.8516L10.8843 29.5986Z" fill="#FCA326"/>
+                              <path d="M7.31082 17.3919C5.52319 16.0527 3.46137 15.1257 1.27321 14.6772L1.22659 14.7938C0.580075 16.4835 0.500427 18.3375 0.999653 20.0764C1.49888 21.8153 2.54991 23.3447 3.99428 24.434L4.01124 24.4467L4.04936 24.4764L10.8838 29.5985L17.1694 24.8515L7.31082 17.3919Z" fill="#FC6D26"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_30847_81937">
+                                <rect width="33" height="36" fill="white" transform="translate(0.5)"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">GitLab</h5>
+                </div>
+                <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="36" viewBox="0 0 40 36" fill="none">
+                            <path d="M8.75404 1.18468L19.9598 0L31.1656 1.18468L39.841 12.8307L19.9598 35.9821L0.0786133 12.8307L8.75404 1.18468Z" fill="#FDB300"/>
+                            <path d="M8.13149 12.8307L19.9598 35.9821L0.0786133 12.8307H8.13149Z" fill="#EA6C00"/>
+                            <path d="M31.7879 12.8307L19.9596 35.9821L39.8408 12.8307H31.7879Z" fill="#EA6C00"/>
+                            <path d="M8.13135 12.8307H31.788L19.9597 35.9821L8.13135 12.8307Z" fill="#FDAD00"/>
+                            <path d="M19.9597 0L8.75386 1.18466L8.13135 12.8307L19.9597 0Z" fill="#FDD231"/>
+                            <path d="M19.9598 0L31.1656 1.18466L31.7881 12.8307L19.9598 0Z" fill="#FDD231"/>
+                            <path d="M39.8408 12.8307L31.1653 1.18469L31.7879 12.8307H39.8408Z" fill="#FDAD00"/>
+                            <path d="M0.0786133 12.8307L8.75401 1.18469L8.13149 12.8307H0.0786133Z" fill="#FDAD00"/>
+                            <path d="M19.9597 0L8.13135 12.8307H31.788L19.9597 0Z" fill="#FEEEB7"/>
+                        </svg>
+                    </a>
+                    <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Sketch</h5>
+                </div>
+                <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <g clip-path="url(#clip0_30847_81943)">
+                              <path d="M22.4999 18.0079C22.5005 19.3059 22.2663 20.5934 21.8087 21.8081C20.5935 22.2657 19.3058 22.5002 18.0073 22.5004H17.9921C16.6551 22.4987 15.374 22.2543 14.1919 21.8087C13.734 20.5938 13.4996 19.3062 13.5 18.0079V17.9921C13.4994 16.6943 13.7333 15.4071 14.1905 14.1924C15.4055 13.734 16.6936 13.4994 17.9923 13.5H18.0075C19.306 13.4994 20.5939 13.7339 21.8088 14.1923C22.2665 15.4068 22.5007 16.6941 22.5 17.992L22.4999 18.0079ZM35.75 15H25.243L32.6721 7.57041C32.089 6.75129 31.4386 5.98226 30.7275 5.27133C30.0165 4.56115 29.2477 3.91073 28.429 3.32789L20.9994 10.7575V0.250594C20.0113 0.0843649 19.011 0.000545189 18.009 0L17.9904 0C16.9712 0.0005625 15.9729 0.0871875 15 0.250594V10.7575L7.57041 3.32789C6.75161 3.91057 5.98312 4.5609 5.27302 5.27203L5.26908 5.27484C4.55928 5.98489 3.90975 6.75272 3.32719 7.57041L10.7574 15H0.250594C0.250594 15 0 16.9734 0 17.9938V18.0062C0 19.0266 0.0864844 20.0265 0.250594 21H10.7575L3.32733 28.4296C4.49615 30.0698 5.93016 31.5038 7.57041 32.6727L15 25.2425V35.75C15.9871 35.9154 16.9861 35.999 17.9869 36H18.0124C19.0132 35.9991 20.0122 35.9155 20.9993 35.75V25.2425L28.4296 32.6727C29.2481 32.0896 30.0167 31.4396 30.7275 30.7292L30.7292 30.7275C31.4393 30.0166 32.0891 29.248 32.6721 28.4296L25.2419 21H35.75C35.9135 20.0282 35.9989 19.0312 36 18.0131V17.9869C35.9989 16.9688 35.9135 15.9718 35.75 15Z" fill="#FF4A00"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_30847_81943">
+                                <rect width="36" height="36" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Zapier</h5>
+                </div>
+                <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none">
+                            <g clip-path="url(#clip0_30847_81946)">
+                              <path d="M40.1132 3.01496C37.105 1.60648 33.8888 0.582815 30.5264 0C30.1133 0.747198 29.6308 1.75218 29.2983 2.55168C25.7238 2.01371 22.1821 2.01371 18.6735 2.55168C18.341 1.75218 17.8475 0.747198 17.4309 0C14.0647 0.582815 10.8448 1.61022 7.83679 3.02243C1.76968 12.198 0.124979 21.1458 0.947329 29.9664C4.97136 32.9739 8.87112 34.8008 12.7051 35.9963C13.6517 34.6924 14.496 33.3064 15.2233 31.8456C13.8381 31.3188 12.5114 30.6688 11.2578 29.914C11.5903 29.6676 11.9156 29.4098 12.23 29.1446C19.876 32.7236 28.1835 32.7236 35.7383 29.1446C36.0561 29.4098 36.3815 29.6676 36.7104 29.914C35.4531 30.6724 34.1227 31.3226 32.7375 31.8493C33.4649 33.3064 34.3055 34.6962 35.2557 36C39.0933 34.8045 42.9967 32.9776 47.0208 29.9664C47.9858 19.7411 45.3724 10.8755 40.1132 3.01496ZM16.2649 24.5418C13.9697 24.5418 12.0874 22.3973 12.0874 19.7859C12.0874 17.1744 13.9295 15.0262 16.2649 15.0262C18.6005 15.0262 20.4826 17.1707 20.4424 19.7859C20.4462 22.3973 18.6005 24.5418 16.2649 24.5418ZM31.7033 24.5418C29.4079 24.5418 27.5256 22.3973 27.5256 19.7859C27.5256 17.1744 29.3678 15.0262 31.7033 15.0262C34.0386 15.0262 35.9209 17.1707 35.8807 19.7859C35.8807 22.3973 34.0386 24.5418 31.7033 24.5418Z" fill="#5865F2"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_30847_81946">
+                                <rect width="46.5" height="36" fill="white" transform="translate(0.75)"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Discord</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- ====== Section Tarification Début -->
+  <div class="bg-gray-100 py-12">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900">Options de Tarification Flexibles</h2>
+      <p class="mt-5 mb-10 text-gray-600">Choisissez le forfait qui correspond le mieux aux besoins de votre entreprise.</p>
+  
+      <!-- Section des Cartes de Tarification -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Forfait Expédition -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-blue-600">Forfait Expédition</h3>
+          <p class="mt-4 text-gray-700">Inclut la gestion des stocks, tableau de bord pour les revendeurs, Excel alimenté par l'IA, et une intégration fluide.</p>
+          <div class="mt-6">
+            <p class="text-4xl font-bold">199€<span class="text-xl text-gray-500">/mois</span></p>
+            <p class="text-gray-500">ou 1 999€/an</p>
+          </div>
+          <button class="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg">Choisir le Forfait Expédition</button>
+        </div>
+  
+        <!-- Forfait Éducation -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-blue-600">Forfait Éducation</h3>
+          <p class="mt-4 text-gray-700">Inclut la gestion scolaire, bibliothèque et finance, et accès décentralisé.</p>
+          <div class="mt-6">
+            <p class="text-4xl font-bold">149€<span class="text-xl text-gray-500">/mois</span></p>
+            <p class="text-gray-500">ou 1 499€/an</p>
+          </div>
+          <button class="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg">Choisir le Forfait Éducation</button>
+        </div>
+  
+        <!-- Forfait Ingénierie -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-blue-600">Forfait Ingénierie</h3>
+          <p class="mt-4 text-gray-700">Inclut la gestion de projets, gestion des employés, Word & Email alimentés par l'IA, et la sécurité des données.</p>
+          <div class="mt-6">
+            <p class="text-4xl font-bold">299€<span class="text-xl text-gray-500">/mois</span></p>
+            <p class="text-gray-500">ou 2 999€/an</p>
+          </div>
+          <button class="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg">Choisir le Forfait Ingénierie</button>
+        </div>
+  
+      </div>
     </div>
   </div>
-</section>
-
-<div class="pattern_1"></div>
-
-<section class="py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mb-14 text-center">
-          <span
-              class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center"> Fonctionnalités </span>
-          <h2 class="text-4xl text-center font-bold text-gray-900 py-5">
-              Fonctionnalités Révolutionnaire
-          </h2>
-          <p class="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto">
-            Fournit des fonctionnalités avancées comme le suivi du temps,
-            l'intégration avec des applications tierces (calendrier / Google Drive), la création de sous-tâches.
-          </p>
-      </div>
-      <div
-          class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-          <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
-                  <svg class="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                          d="M10 27.5L15 25M15 25V21.25M15 25L20 27.5M8.75 14.375L12.5998 11.0064C13.1943 10.4862 14.1163 10.6411 14.5083 11.327L15.4917 13.048C15.8837 13.7339 16.8057 13.8888 17.4002 13.3686L21.25 10M2.5 2.5H27.5M26.25 2.5V13.25C26.25 17.0212 26.25 18.9069 25.0784 20.0784C23.9069 21.25 22.0212 21.25 18.25 21.25H11.75C7.97876 21.25 6.09315 21.25 4.92157 20.0784C3.75 18.9069 3.75 17.0212 3.75 13.25V2.5"
-                          stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-              </div>
-              <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
-                Gestion des Stocks
-              </h4>
-              <p class="text-sm font-normal text-gray-500">
-                Gardez un inventaire précis, suivez les expéditions et optimisez la logistique.
-              </p>
-          </div>
-          <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
-                  <svg class="stroke-pink-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                          d="M2.5 7.5C2.5 4.73858 4.73858 2.5 7.5 2.5C10.2614 2.5 12.5 4.73858 12.5 7.5C12.5 10.2614 10.2614 12.5 7.5 12.5C4.73858 12.5 2.5 10.2614 2.5 7.5Z"
-                          stroke="" stroke-width="2"></path>
-                      <path
-                          d="M2.5 22.5C2.5 20.143 2.5 18.9645 3.23223 18.2322C3.96447 17.5 5.14298 17.5 7.5 17.5C9.85702 17.5 11.0355 17.5 11.7678 18.2322C12.5 18.9645 12.5 20.143 12.5 22.5C12.5 24.857 12.5 26.0355 11.7678 26.7678C11.0355 27.5 9.85702 27.5 7.5 27.5C5.14298 27.5 3.96447 27.5 3.23223 26.7678C2.5 26.0355 2.5 24.857 2.5 22.5Z"
-                          stroke="" stroke-width="2"></path>
-                      <path
-                          d="M17.5 7.5C17.5 5.14298 17.5 3.96447 18.2322 3.23223C18.9645 2.5 20.143 2.5 22.5 2.5C24.857 2.5 26.0355 2.5 26.7678 3.23223C27.5 3.96447 27.5 5.14298 27.5 7.5C27.5 9.85702 27.5 11.0355 26.7678 11.7678C26.0355 12.5 24.857 12.5 22.5 12.5C20.143 12.5 18.9645 12.5 18.2322 11.7678C17.5 11.0355 17.5 9.85702 17.5 7.5Z"
-                          stroke="" stroke-width="2"></path>
-                      <path
-                          d="M17.5 22.5C17.5 19.7386 19.7386 17.5 22.5 17.5C25.2614 17.5 27.5 19.7386 27.5 22.5C27.5 25.2614 25.2614 27.5 22.5 27.5C19.7386 27.5 17.5 25.2614 17.5 22.5Z"
-                          stroke="" stroke-width="2"></path>
-                  </svg>
-              </div>
-              <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
-                Intégration Transparentes
-              </h4>
-              <p class="text-sm font-normal text-gray-500">
-                S'intègre facilement aux systèmes de gestion existants.
-              </p>
-          </div>
-          <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
-                  <svg class="stroke-teal-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                          d="M3.75 26.25H26.25M6.25 22.875C4.86929 22.875 3.75 21.8676 3.75 20.625V12.75C3.75 11.5074 4.86929 10.5 6.25 10.5C7.63071 10.5 8.75 11.5074 8.75 12.75V20.625C8.75 21.8676 7.63071 22.875 6.25 22.875ZM15 22.875C13.6193 22.875 12.5 21.8676 12.5 20.625V9.375C12.5 8.13236 13.6193 7.125 15 7.125C16.3807 7.125 17.5 8.13236 17.5 9.375V20.625C17.5 21.8676 16.3807 22.875 15 22.875ZM23.75 22.875C22.3693 22.875 21.25 21.8676 21.25 20.625V6C21.25 4.75736 22.3693 3.75 23.75 3.75C25.1307 3.75 26.25 4.75736 26.25 6V20.625C26.25 21.8676 25.1307 22.875 23.75 22.875Z"
-                          stroke="" stroke-width="2" stroke-linecap="round"></path>
-                  </svg>
-              </div>
-              <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
-                Tableau de Bord Revendeurs
-              </h4>
-              <p class="text-sm font-normal text-gray-500">
-                Offrez à vos revendeurs un tableau de bord pour gérer les produits,
-                les ventes et les commandes.
-              </p>
-          </div>
-          <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
-                  <svg class="stroke-orange-600 transition-all duration-500 group-hover:stroke-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                          d="M15.4167 12.0833V21.25M5.41667 21.25V20.8333C5.41667 19.262 5.41667 18.4763 5.90482 17.9882C6.39298 17.5 7.17865 17.5 8.75 17.5H22.0833C23.6547 17.5 24.4404 17.5 24.9285 17.9882C25.4167 18.4763 25.4167 19.262 25.4167 20.8333V21.25M15.4167 9.16667C13.8453 9.16667 13.0596 9.16667 12.5715 8.67851C12.0833 8.19036 12.0833 7.40468 12.0833 5.83333C12.0833 4.26198 12.0833 3.47631 12.5715 2.98816C13.0596 2.5 13.8453 2.5 15.4167 2.5C16.988 2.5 17.7737 2.5 18.2618 2.98816C18.75 3.47631 18.75 4.26198 18.75 5.83333C18.75 7.40468 18.75 8.19036 18.2618 8.67851C17.7737 9.16667 16.988 9.16667 15.4167 9.16667ZM7.08333 25.8333C7.08333 26.7538 6.33714 27.5 5.41667 27.5C4.49619 27.5 3.75 26.7538 3.75 25.8333C3.75 24.9129 4.49619 24.1667 5.41667 24.1667C6.33714 24.1667 7.08333 24.9129 7.08333 25.8333ZM17.0833 25.8333C17.0833 26.7538 16.3371 27.5 15.4167 27.5C14.4962 27.5 13.75 26.7538 13.75 25.8333C13.75 24.9129 14.4962 24.1667 15.4167 24.1667C16.3371 24.1667 17.0833 24.9129 17.0833 25.8333ZM27.0833 25.8333C27.0833 26.7538 26.3371 27.5 25.4167 27.5C24.4962 27.5 23.75 26.7538 23.75 25.8333C23.75 24.9129 24.4962 24.1667 25.4167 24.1667C26.3371 24.1667 27.0833 24.9129 27.0833 25.8333Z"
-                          stroke="" stroke-width="2" stroke-linecap="round"></path>
-                  </svg>
-              </div>
-              <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
-                Excel Alimenté par l'IA
-              </h4>
-              <p class="text-sm font-normal text-gray-500">
-                Analysez les données et générez des rapports automatiquement.
-              </p>
-          </div>
-      </div>
-  </div>
-</section>
-<div class="pattern_2"></div>
-<!---- API INTEGRATION---->
-<section class="py-24 relative">
-  <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
-      <div class="w-full flex-col justify-start items-center lg:gap-11 gap-7 inline-flex">
-          <div class="w-full justify-between items-center lg:gap-12 gap-7 flex md:flex-row flex-col">
-              <div class="flex-col justify-center md:items-start items-center gap-2.5 inline-flex">
-                  <h2 class="text-gray-900 text-3xl font-bold font-manrope leading-normal">Intégration API</h2>
-                  <p class="text-gray-500 text-base font-normal leading-relaxed md:text-start text-center">Sailsmakr offre une API robuste permettant une intégration fluide avec vos systèmes existants, 
-                    vous garantissant une connectivité et une automatisation de bout en bouts.</p>
-              </div>
-              <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-xl shadow justify-center items-center flex">
-                  <span class="px-2 py-px text-white text-base font-semibold leading-relaxed whitespace-nowrap">TOUTES LES INTEGRATIONS</span>
-                  <div class="w-5 h-5 relative">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path d="M4.5845 4.99988L9.5847 10.0001L4.58154 15.0032M10.4178 4.99988L15.418 10.0001L10.4149 15.0032" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </div>
-              </button>
-          </div>
-          <div class="w-full justify-start items-center gap-6 flex md:flex-row flex-col">
-              <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
-                  <a href="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <g clip-path="url(#clip0_30847_81934)">
-                            <path d="M7.71003 22.6772C7.71003 24.7464 6.03759 26.4189 3.96829 26.4189C1.899 26.4189 0.226562 24.7464 0.226562 22.6772C0.226562 20.6079 1.899 18.9354 3.96829 18.9354H7.71003V22.6772ZM9.58089 22.6772C9.58089 20.6079 11.2533 18.9354 13.3226 18.9354C15.3919 18.9354 17.0644 20.6079 17.0644 22.6772V32.0315C17.0644 34.1008 15.3919 35.7732 13.3226 35.7732C11.2533 35.7732 9.58089 34.1008 9.58089 32.0315V22.6772Z" fill="#E01E5A"/>
-                            <path d="M13.3227 7.65351C11.2534 7.65351 9.58092 5.98107 9.58092 3.91178C9.58092 1.84248 11.2534 0.170044 13.3227 0.170044C15.3919 0.170044 17.0644 1.84248 17.0644 3.91178V7.65351H13.3227ZM13.3227 9.55272C15.3919 9.55272 17.0644 11.2252 17.0644 13.2945C17.0644 15.3637 15.3919 17.0362 13.3227 17.0362H3.93997C1.87068 17.0362 0.198242 15.3637 0.198242 13.2945C0.198242 11.2252 1.87068 9.55272 3.93997 9.55272H13.3227Z" fill="#36C5F0"/>
-                            <path d="M28.3182 13.2945C28.3182 11.2252 29.9906 9.55272 32.0599 9.55272C34.1292 9.55272 35.8017 11.2252 35.8017 13.2945C35.8017 15.3637 34.1292 17.0362 32.0599 17.0362H28.3182V13.2945ZM26.4473 13.2945C26.4473 15.3637 24.7749 17.0362 22.7056 17.0362C20.6363 17.0362 18.9639 15.3637 18.9639 13.2945V3.91178C18.9639 1.84248 20.6363 0.170044 22.7056 0.170044C24.7749 0.170044 26.4473 1.84248 26.4473 3.91178V13.2945Z" fill="#2EB67D"/>
-                            <path d="M22.7056 28.2898C24.7749 28.2898 26.4473 29.9622 26.4473 32.0315C26.4473 34.1008 24.7749 35.7732 22.7056 35.7732C20.6363 35.7732 18.9639 34.1008 18.9639 32.0315V28.2898H22.7056ZM22.7056 26.4189C20.6363 26.4189 18.9639 24.7464 18.9639 22.6772C18.9639 20.6079 20.6363 18.9354 22.7056 18.9354H32.0883C34.1576 18.9354 35.83 20.6079 35.83 22.6772C35.83 24.7464 34.1576 26.4189 32.0883 26.4189H22.7056Z" fill="#ECB22E"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_30847_81934">
-                              <rect width="36" height="36" fill="white"/>
-                            </clipPath>
-                          </defs>
-                      </svg>
-                  </a>
-                  <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Slack</h5>
-              </div>
-              <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
-                  <a href="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36" fill="none">
-                          <g clip-path="url(#clip0_30847_81937)">
-                            <path d="M33.1355 14.7939L33.091 14.6752L28.5983 2.95603C28.5073 2.72592 28.3454 2.53072 28.1363 2.39868C27.9801 2.29873 27.8027 2.23675 27.6183 2.21771C27.434 2.19866 27.2477 2.22308 27.0743 2.289C26.9012 2.35493 26.7456 2.46053 26.6206 2.59734C26.4956 2.73415 26.4042 2.89837 26.354 3.07683L23.3214 12.3611H11.0406L8.00804 3.07683C7.95745 2.89864 7.86595 2.73473 7.74079 2.59818C7.61562 2.46163 7.46029 2.35622 7.28715 2.29035C7.11403 2.22447 6.92792 2.19996 6.74364 2.21877C6.55937 2.23758 6.38204 2.29919 6.22579 2.39868C6.01656 2.53072 5.85473 2.72592 5.7638 2.95603L1.27321 14.6774L1.22659 14.7939C0.580075 16.4836 0.500427 18.3376 0.999653 20.0765C1.49888 21.8154 2.54991 23.3449 3.99428 24.4341L4.01124 24.4469L4.04936 24.4765L10.8838 29.5986L14.2745 32.1608L16.3344 33.7184C16.5761 33.9011 16.8707 33.9998 17.1736 33.9998C17.4765 33.9998 17.7711 33.9011 18.0128 33.7184L20.0727 32.1608L23.4634 29.5986L30.3466 24.4469L30.3657 24.432C31.8099 23.3432 32.861 21.8141 33.3607 20.0757C33.8602 18.3372 33.7812 16.4835 33.1355 14.7939Z" fill="#E24329"/>
-                            <path d="M33.1357 14.7935L33.0912 14.6748C30.9022 15.124 28.8396 16.0517 27.0514 17.3916L17.1865 24.8512L23.4678 29.5982L30.351 24.4464L30.3701 24.4316C31.8137 23.3421 32.864 21.8129 33.3628 20.0745C33.8615 18.3361 33.7818 16.4826 33.1357 14.7935Z" fill="#FC6D26"/>
-                            <path d="M10.8843 29.5986L14.275 32.1607L16.3349 33.7183C16.5766 33.901 16.8712 33.9997 17.1741 33.9997C17.477 33.9997 17.7716 33.901 18.0133 33.7183L20.0732 32.1607L23.4639 29.5986L17.1826 24.8516L10.8843 29.5986Z" fill="#FCA326"/>
-                            <path d="M7.31082 17.3919C5.52319 16.0527 3.46137 15.1257 1.27321 14.6772L1.22659 14.7938C0.580075 16.4835 0.500427 18.3375 0.999653 20.0764C1.49888 21.8153 2.54991 23.3447 3.99428 24.434L4.01124 24.4467L4.04936 24.4764L10.8838 29.5985L17.1694 24.8515L7.31082 17.3919Z" fill="#FC6D26"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_30847_81937">
-                              <rect width="33" height="36" fill="white" transform="translate(0.5)"/>
-                            </clipPath>
-                          </defs>
-                      </svg>
-                  </a>
-                  <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">GitLab</h5>
-              </div>
-              <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
-                  <a href="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="36" viewBox="0 0 40 36" fill="none">
-                          <path d="M8.75404 1.18468L19.9598 0L31.1656 1.18468L39.841 12.8307L19.9598 35.9821L0.0786133 12.8307L8.75404 1.18468Z" fill="#FDB300"/>
-                          <path d="M8.13149 12.8307L19.9598 35.9821L0.0786133 12.8307H8.13149Z" fill="#EA6C00"/>
-                          <path d="M31.7879 12.8307L19.9596 35.9821L39.8408 12.8307H31.7879Z" fill="#EA6C00"/>
-                          <path d="M8.13135 12.8307H31.788L19.9597 35.9821L8.13135 12.8307Z" fill="#FDAD00"/>
-                          <path d="M19.9597 0L8.75386 1.18466L8.13135 12.8307L19.9597 0Z" fill="#FDD231"/>
-                          <path d="M19.9598 0L31.1656 1.18466L31.7881 12.8307L19.9598 0Z" fill="#FDD231"/>
-                          <path d="M39.8408 12.8307L31.1653 1.18469L31.7879 12.8307H39.8408Z" fill="#FDAD00"/>
-                          <path d="M0.0786133 12.8307L8.75401 1.18469L8.13149 12.8307H0.0786133Z" fill="#FDAD00"/>
-                          <path d="M19.9597 0L8.13135 12.8307H31.788L19.9597 0Z" fill="#FEEEB7"/>
-                      </svg>
-                  </a>
-                  <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Sketch</h5>
-              </div>
-              <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
-                  <a href="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <g clip-path="url(#clip0_30847_81943)">
-                            <path d="M22.4999 18.0079C22.5005 19.3059 22.2663 20.5934 21.8087 21.8081C20.5935 22.2657 19.3058 22.5002 18.0073 22.5004H17.9921C16.6551 22.4987 15.374 22.2543 14.1919 21.8087C13.734 20.5938 13.4996 19.3062 13.5 18.0079V17.9921C13.4994 16.6943 13.7333 15.4071 14.1905 14.1924C15.4055 13.734 16.6936 13.4994 17.9923 13.5H18.0075C19.306 13.4994 20.5939 13.7339 21.8088 14.1923C22.2665 15.4068 22.5007 16.6941 22.5 17.992L22.4999 18.0079ZM35.75 15H25.243L32.6721 7.57041C32.089 6.75129 31.4386 5.98226 30.7275 5.27133C30.0165 4.56115 29.2477 3.91073 28.429 3.32789L20.9994 10.7575V0.250594C20.0113 0.0843649 19.011 0.000545189 18.009 0L17.9904 0C16.9712 0.0005625 15.9729 0.0871875 15 0.250594V10.7575L7.57041 3.32789C6.75161 3.91057 5.98312 4.5609 5.27302 5.27203L5.26908 5.27484C4.55928 5.98489 3.90975 6.75272 3.32719 7.57041L10.7574 15H0.250594C0.250594 15 0 16.9734 0 17.9938V18.0062C0 19.0266 0.0864844 20.0265 0.250594 21H10.7575L3.32733 28.4296C4.49615 30.0698 5.93016 31.5038 7.57041 32.6727L15 25.2425V35.75C15.9871 35.9154 16.9861 35.999 17.9869 36H18.0124C19.0132 35.9991 20.0122 35.9155 20.9993 35.75V25.2425L28.4296 32.6727C29.2481 32.0896 30.0167 31.4396 30.7275 30.7292L30.7292 30.7275C31.4393 30.0166 32.0891 29.248 32.6721 28.4296L25.2419 21H35.75C35.9135 20.0282 35.9989 19.0312 36 18.0131V17.9869C35.9989 16.9688 35.9135 15.9718 35.75 15Z" fill="#FF4A00"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_30847_81943">
-                              <rect width="36" height="36" fill="white"/>
-                            </clipPath>
-                          </defs>
-                      </svg>
-                  </a>
-                  <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Zapier</h5>
-              </div>
-              <div class="w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex">
-                  <a href="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none">
-                          <g clip-path="url(#clip0_30847_81946)">
-                            <path d="M40.1132 3.01496C37.105 1.60648 33.8888 0.582815 30.5264 0C30.1133 0.747198 29.6308 1.75218 29.2983 2.55168C25.7238 2.01371 22.1821 2.01371 18.6735 2.55168C18.341 1.75218 17.8475 0.747198 17.4309 0C14.0647 0.582815 10.8448 1.61022 7.83679 3.02243C1.76968 12.198 0.124979 21.1458 0.947329 29.9664C4.97136 32.9739 8.87112 34.8008 12.7051 35.9963C13.6517 34.6924 14.496 33.3064 15.2233 31.8456C13.8381 31.3188 12.5114 30.6688 11.2578 29.914C11.5903 29.6676 11.9156 29.4098 12.23 29.1446C19.876 32.7236 28.1835 32.7236 35.7383 29.1446C36.0561 29.4098 36.3815 29.6676 36.7104 29.914C35.4531 30.6724 34.1227 31.3226 32.7375 31.8493C33.4649 33.3064 34.3055 34.6962 35.2557 36C39.0933 34.8045 42.9967 32.9776 47.0208 29.9664C47.9858 19.7411 45.3724 10.8755 40.1132 3.01496ZM16.2649 24.5418C13.9697 24.5418 12.0874 22.3973 12.0874 19.7859C12.0874 17.1744 13.9295 15.0262 16.2649 15.0262C18.6005 15.0262 20.4826 17.1707 20.4424 19.7859C20.4462 22.3973 18.6005 24.5418 16.2649 24.5418ZM31.7033 24.5418C29.4079 24.5418 27.5256 22.3973 27.5256 19.7859C27.5256 17.1744 29.3678 15.0262 31.7033 15.0262C34.0386 15.0262 35.9209 17.1707 35.8807 19.7859C35.8807 22.3973 34.0386 24.5418 31.7033 24.5418Z" fill="#5865F2"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_30847_81946">
-                              <rect width="46.5" height="36" fill="white" transform="translate(0.75)"/>
-                            </clipPath>
-                          </defs>
-                      </svg>
-                  </a>
-                  <h5 class="text-center text-gray-900 text-base font-semibold leading-relaxed">Discord</h5>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-
-<!-- ====== Section Tarification Début -->
-<section class="py-24 relative">
-  <div class="absolute h-[36.5rem] w-full top-0 bg-gradient-to-r from-indigo-600 to-violet-600 -z-10"></div>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mb-12">
-          <h2 class="font-manrope text-5xl text-center font-bold text-white mb-4">Tarification</h2>
-          <p class="text-gray-300 text-xl text-center leading-6"> Découvrez nos plans tarifaires pour vous aider à réussir.</p>
-       
-      </div>
-          <!--Grid-->
-          <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
-              <!--Pricing Card-->
-              <div class="group relative flex flex-col mx-auto w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300  p-8 xl:p-12  ">
-                  <div class="border-b border-solid border-gray-200 pb-9 mb-9">
-                      <div class="w-16 h-16 rounded-full bg-indigo-50 mx-auto flex justify-center items-center transition-all duration-300 group-hover:bg-indigo-600">
-                      <svg class="w-6 h-6 text-indigo-600 transition-all duration-300 group-hover:text-white" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8.42418 27.2608V12.0502C8.42418 11.8031 8.22388 11.6028 7.97681 11.6028V11.6028C5.55154 11.6028 4.3389 11.6028 3.58547 12.3562C2.83203 13.1097 2.83203 14.3223 2.83203 16.7476V22.116C2.83203 24.5413 2.83203 25.754 3.58547 26.5074C4.3389 27.2608 5.55154 27.2608 7.97681 27.2608H8.42418ZM8.42418 27.2608L8.42418 22.5246C8.42418 15.9141 9.90241 9.38734 12.7507 3.42199V3.42199C13.2066 2.46714 14.4408 2.19891 15.2519 2.87841C16.4455 3.87836 17.135 5.35554 17.135 6.91266V8.08463C17.135 9.40562 18.2059 10.4765 19.5269 10.4765H24.0982C25.1518 10.4765 25.6786 10.4765 26.0736 10.6078C27.0571 10.9346 27.7484 11.8197 27.8273 12.8531C27.859 13.2681 27.7314 13.7792 27.4762 14.8014L25.3389 23.3623C24.8715 25.2346 24.6377 26.1707 23.9399 26.7158C23.242 27.2609 22.2771 27.2609 20.3473 27.2609L8.42418 27.2608Z" stroke="currentColor" stroke-width="2"/>
-                          </svg>
-                  </div>
-                  <h3 class="font-manrope text-2xl font-bold my-7 text-center text-indigo-600">Edge</h3>
-                  <div class="flex items-center justify-center">
-                      <span class="font-manrope text-4xl font-medium text-gray-900">$500</span>
-                      <span class="text-xl text-gray-500 ml-3">|&nbsp; An</span>
-                  </div>
-              </div>
-                  <!--List-->
-                  <ul class="mb-12 space-y-6 text-left text-lg text-gray-600 group-hover:text-gray-900">
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Supporte jusqu'à 3 000 étudiants et 200 enseignants.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Accès pour enseignants, étudiants, ressources humaines, bibliothèque et comptable.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Système d'archivage et de gestion des livres scolaires. </span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Outils pour la gestion des dossiers financiers des étudiants.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                        <!-- Icon -->
-                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                        <span>Gestion de projet et de tâches.</span>
-                    </li>
-                    <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Gestion des factures.</span>
-                  </li>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>Jusqu'à 500 Go de stockage pour les documents et fichiers scolaires.</span>
-                  </li>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                     <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>50 comptes email professionnels.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                   <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                   <span>1 domaine personnalisé avec hébergement de site basique (jusqu'à 10 Go).</span>
-                 </li>
-                  </ul>
-                  <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-base text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white ">Achetez Maintenant</a>
-                  <!--List End-->
-              </div> 
-              <!--Pricing Card-->
-              <div class="group relative flex flex-col mx-auto w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300  p-8 xl:p-12  ">
-                  <div class="border-b border-solid border-gray-200 pb-9 mb-9">
-                      <div class="w-16 h-16 rounded-full bg-indigo-50 mx-auto flex justify-center items-center transition-all duration-300 group-hover:bg-indigo-600">
-                  
-                          <svg class="w-6 h-6 text-indigo-600 transition-all duration-300 group-hover:text-white"  viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M26.8333 21.25C26.8333 20.6977 26.3856 20.25 25.8333 20.25C25.281 20.25 24.8333 20.6977 24.8333 21.25H26.8333ZM5.16667 21.25C5.16667 20.6977 4.71895 20.25 4.16667 20.25C3.61438 20.25 3.16667 20.6977 3.16667 21.25H5.16667ZM4.16667 8.85714H25.8333V6.85714H4.16667V8.85714ZM26.5 9.64286V16.7857H28.5V9.64286H26.5ZM3.5 16.7857V9.64286H1.5V16.7857H3.5ZM12.5 17.5714H4.16667V19.5714H12.5V17.5714ZM25.8333 17.5714H17.5V19.5714H25.8333V17.5714ZM1.5 16.7857C1.5 18.2581 2.63005 19.5714 4.16667 19.5714V17.5714C3.86234 17.5714 3.5 17.2858 3.5 16.7857H1.5ZM26.5 16.7857C26.5 17.2858 26.1377 17.5714 25.8333 17.5714V19.5714C27.37 19.5714 28.5 18.2581 28.5 16.7857H26.5ZM25.8333 8.85714C26.1377 8.85714 26.5 9.14282 26.5 9.64286H28.5C28.5 8.17045 27.37 6.85714 25.8333 6.85714V8.85714ZM4.16667 6.85714C2.63004 6.85714 1.5 8.17045 1.5 9.64286H3.5C3.5 9.14282 3.86234 8.85714 4.16667 8.85714V6.85714ZM24.8333 21.25V25.7143H26.8333V21.25H24.8333ZM24.1667 26.5H5.83333V28.5H24.1667V26.5ZM5.16667 25.7143V21.25H3.16667V25.7143H5.16667ZM5.83333 26.5C5.52901 26.5 5.16667 26.2143 5.16667 25.7143H3.16667C3.16667 27.1867 4.29671 28.5 5.83333 28.5V26.5ZM24.8333 25.7143C24.8333 26.2143 24.471 26.5 24.1667 26.5V28.5C25.7033 28.5 26.8333 27.1867 26.8333 25.7143H24.8333ZM12.5 3.5H17.5V1.5H12.5V3.5ZM18.1667 4.28571V7.85714H20.1667V4.28571H18.1667ZM11.8333 7.85714V4.28571H9.83333V7.85714H11.8333ZM17.5 3.5C17.8043 3.5 18.1667 3.78567 18.1667 4.28571H20.1667C20.1667 2.81331 19.0366 1.5 17.5 1.5V3.5ZM12.5 1.5C10.9634 1.5 9.83333 2.81331 9.83333 4.28571H11.8333C11.8333 3.78567 12.1957 3.5 12.5 3.5V1.5ZM14.1667 16H15.8333V14H14.1667V16ZM16.5 16.7857V20.3571H18.5V16.7857H16.5ZM15.8333 21.1429H14.1667V23.1429H15.8333V21.1429ZM13.5 20.3571V16.7857H11.5V20.3571H13.5ZM14.1667 21.1429C13.8623 21.1429 13.5 20.8572 13.5 20.3571H11.5C11.5 21.8295 12.63 23.1429 14.1667 23.1429V21.1429ZM16.5 20.3571C16.5 20.8572 16.1377 21.1429 15.8333 21.1429V23.1429C17.37 23.1429 18.5 21.8295 18.5 20.3571H16.5ZM15.8333 16C16.1377 16 16.5 16.2857 16.5 16.7857H18.5C18.5 15.3133 17.37 14 15.8333 14V16ZM14.1667 14C12.63 14 11.5 15.3133 11.5 16.7857H13.5C13.5 16.2857 13.8623 16 14.1667 16V14Z" fill="currentcolor"/>
-                              </svg>
-                              
-                  </div>
-                  <h3 class="font-manrope text-2xl font-bold my-7 text-center text-indigo-600"> Shipper </h3>
-                  <div class="flex items-center justify-center">
-                      <span class="font-manrope text-4xl font-medium text-gray-900">$1000</span>
-                      <span class="text-xl text-gray-500 ml-3">|&nbsp; An</span>
-                  </div>
-              </div>
-                  <!--List-->
-                  <ul class="mb-12 space-y-6 text-left text-lg text-gray-600 group-hover:text-gray-900">
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Tableau de bord du revendeur.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Outils de gestion des stocks.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Gestion des employés.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                          <!-- Icon -->
-                          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                          <span>Gestion de projet et de tâches.</span>
-                      </li>
-                      <li class="flex items-center space-x-3.5">
-                        <!-- Icon -->
-                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                        <span>Facturation automatisée pour les services d'expédition.</span>
-                    </li>
-                    <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Jusqu'à 500 Go de stockage pour les documents et fichiers.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>100 comptes email professionnels</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>1 domaine personnalisé avec hébergement de site premium (jusqu'à 20 Go).</span>
-                  </li>
-                  </ul>
-                  <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-base text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white ">Achetez Maintenant</a>
-                  <!--List End-->
-              </div> 
-              <!--Pricing Card-->
-            <div class="group relative flex flex-col mx-auto w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300  p-8 xl:p-12  ">
-              <div class="border-b border-solid border-gray-200 pb-9 mb-9">
-                  <div class="w-16 h-16 rounded-full bg-indigo-50 mx-auto flex justify-center items-center transition-all duration-300 group-hover:bg-indigo-600">
-                      <svg class="w-6 h-6 text-indigo-600 transition-all duration-300 group-hover:text-white" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18.1641 14.75C18.7163 14.75 19.1641 14.3023 19.1641 13.75C19.1641 13.1977 18.7163 12.75 18.1641 12.75V14.75ZM13.1641 12.75C12.6118 12.75 12.1641 13.1977 12.1641 13.75C12.1641 14.3023 12.6118 14.75 13.1641 14.75V12.75ZM18.1641 19.75C18.7163 19.75 19.1641 19.3023 19.1641 18.75C19.1641 18.1977 18.7163 17.75 18.1641 17.75V19.75ZM13.1641 17.75C12.6118 17.75 12.1641 18.1977 12.1641 18.75C12.1641 19.3023 12.6118 19.75 13.1641 19.75V17.75ZM16.6641 23.75C16.6641 23.1977 16.2163 22.75 15.6641 22.75C15.1118 22.75 14.6641 23.1977 14.6641 23.75H16.6641ZM14.6641 27.5C14.6641 28.0523 15.1118 28.5 15.6641 28.5C16.2163 28.5 16.6641 28.0523 16.6641 27.5H14.6641ZM18.7499 3.08579L18.0427 2.37868L18.7499 3.08579ZM27.5783 3.08579L26.8712 3.79289L27.5783 3.08579ZM12.5783 3.08579L11.8712 3.79289L12.5783 3.08579ZM9.99985 8.08579L10.707 8.79289L9.99985 8.08579ZM21.3283 8.08579L22.0354 7.37868L21.3283 8.08579ZM21.3283 26.9142L20.6212 26.2071L21.3283 26.9142ZM27.5783 21.9142L28.2854 22.6213L27.5783 21.9142ZM9.99985 26.9142L10.707 26.2071L9.99985 26.9142ZM13.4141 8.5H17.9141V6.5H13.4141V8.5ZM20.9141 11.5V23.5H22.9141V11.5H20.9141ZM17.9141 26.5H13.4141V28.5H17.9141V26.5ZM10.4141 23.5V11.5H8.41406V23.5H10.4141ZM7.16407 3.5H9.16407V1.5H7.16407V3.5ZM4.16406 18.5L4.16407 6.5L2.16407 6.5L2.16406 18.5H4.16406ZM12.1641 6.5V7.5H14.1641V6.5H12.1641ZM9.41406 21.5H7.16406L7.16406 23.5H9.41406L9.41406 21.5ZM24.1641 1.5H22.1641V3.5H24.1641V1.5ZM29.1641 18.5V6.5H27.1641V18.5H29.1641ZM17.1641 6.5V7.5H19.1641V6.5H17.1641ZM21.9141 23.5H24.1641V21.5H21.9141V23.5ZM18.1641 12.75H13.1641V14.75H18.1641V12.75ZM18.1641 17.75H13.1641V19.75H18.1641V17.75ZM14.6641 23.75V27.5H16.6641V23.75H14.6641ZM22.1641 1.5C21.2495 1.5 20.463 1.49788 19.8363 1.58214C19.1808 1.67027 18.5524 1.86902 18.0427 2.37868L19.457 3.79289C19.5331 3.71677 19.669 3.62262 20.1028 3.56431C20.5653 3.50212 21.193 3.5 22.1641 3.5V1.5ZM19.1641 6.5C19.1641 5.52892 19.1662 4.90121 19.2284 4.4387C19.2867 4.00496 19.3808 3.86902 19.457 3.79289L18.0427 2.37868C17.5331 2.88834 17.3343 3.51669 17.2462 4.17221C17.1619 4.79896 17.1641 5.58546 17.1641 6.5H19.1641ZM24.1641 3.5C25.1351 3.5 25.7628 3.50212 26.2254 3.56431C26.6591 3.62262 26.795 3.71677 26.8712 3.79289L28.2854 2.37868C27.7757 1.86902 27.1474 1.67027 26.4918 1.58214C25.8651 1.49788 25.0786 1.5 24.1641 1.5V3.5ZM29.1641 6.5C29.1641 5.58546 29.1662 4.79896 29.0819 4.17221C28.9938 3.51669 28.795 2.88834 28.2854 2.37868L26.8712 3.79289C26.9473 3.86902 27.0414 4.00496 27.0998 4.4387C27.1619 4.90121 27.1641 5.52892 27.1641 6.5H29.1641ZM2.16406 18.5C2.16406 19.4145 2.16194 20.201 2.2462 20.8278C2.33434 21.4833 2.53308 22.1117 3.04274 22.6213L4.45696 21.2071C4.38083 21.131 4.28668 20.995 4.22837 20.5613C4.16619 20.0988 4.16406 19.4711 4.16406 18.5H2.16406ZM7.16406 21.5C6.19298 21.5 5.56527 21.4979 5.10277 21.4357C4.66903 21.3774 4.53308 21.2832 4.45696 21.2071L3.04274 22.6213C3.5524 23.131 4.18075 23.3297 4.83627 23.4179C5.46302 23.5021 6.24952 23.5 7.16406 23.5L7.16406 21.5ZM9.16407 3.5C10.1351 3.5 10.7629 3.50212 11.2254 3.56431C11.6591 3.62262 11.795 3.71677 11.8712 3.79289L13.2854 2.37868C12.7757 1.86902 12.1474 1.67027 11.4919 1.58214C10.8651 1.49788 10.0786 1.5 9.16407 1.5V3.5ZM14.1641 6.5C14.1641 5.58546 14.1662 4.79896 14.0819 4.17221C13.9938 3.51669 13.795 2.88834 13.2854 2.37868L11.8712 3.79289C11.9473 3.86902 12.0414 4.00496 12.0998 4.4387C12.1619 4.90121 12.1641 5.52892 12.1641 6.5H14.1641ZM7.16407 1.5C6.24953 1.5 5.46303 1.49788 4.83628 1.58214C4.18076 1.67027 3.55241 1.86902 3.04275 2.37868L4.45696 3.79289C4.53309 3.71677 4.66903 3.62262 5.10277 3.56431C5.56528 3.50212 6.19299 3.5 7.16407 3.5V1.5ZM4.16407 6.5C4.16407 5.52892 4.16619 4.90121 4.22838 4.4387C4.28669 4.00496 4.38084 3.86902 4.45696 3.79289L3.04275 2.37868C2.53309 2.88834 2.33434 3.51669 2.24621 4.17221C2.16195 4.79896 2.16407 5.58546 2.16407 6.5L4.16407 6.5ZM13.4141 6.5C12.4995 6.5 11.713 6.49788 11.0863 6.58214C10.4308 6.67027 9.8024 6.86902 9.29274 7.37868L10.707 8.79289C10.7831 8.71677 10.919 8.62262 11.3528 8.56431C11.8153 8.50212 12.443 8.5 13.4141 8.5V6.5ZM10.4141 11.5C10.4141 10.5289 10.4162 9.90121 10.4784 9.4387C10.5367 9.00496 10.6308 8.86902 10.707 8.79289L9.29274 7.37868C8.78308 7.88834 8.58433 8.51669 8.4962 9.17221C8.41194 9.79896 8.41406 10.5855 8.41406 11.5H10.4141ZM17.9141 8.5C18.8851 8.5 19.5129 8.50212 19.9754 8.56431C20.4091 8.62262 20.545 8.71677 20.6212 8.79289L22.0354 7.37868C21.5257 6.86902 20.8974 6.67027 20.2419 6.58214C19.6151 6.49788 18.8286 6.5 17.9141 6.5V8.5ZM22.9141 11.5C22.9141 10.5855 22.9162 9.79896 22.8319 9.17221C22.7438 8.51669 22.545 7.88834 22.0354 7.37868L20.6212 8.79289C20.6973 8.86902 20.7914 9.00496 20.8498 9.4387C20.9119 9.90121 20.9141 10.5289 20.9141 11.5H22.9141ZM20.9141 23.5C20.9141 24.4711 20.9119 25.0988 20.8498 25.5613C20.7914 25.995 20.6973 26.131 20.6212 26.2071L22.0354 27.6213C22.545 27.1117 22.7438 26.4833 22.8319 25.8278C22.9162 25.201 22.9141 24.4145 22.9141 23.5H20.9141ZM17.9141 28.5C18.8286 28.5 19.6151 28.5021 20.2419 28.4179C20.8974 28.3297 21.5257 28.131 22.0354 27.6213L20.6212 26.2071C20.545 26.2832 20.4091 26.3774 19.9754 26.4357C19.5129 26.4979 18.8851 26.5 17.9141 26.5V28.5ZM27.1641 18.5C27.1641 19.4711 27.1619 20.0988 27.0998 20.5613C27.0414 20.995 26.9473 21.131 26.8712 21.2071L28.2854 22.6213C28.795 22.1117 28.9938 21.4833 29.0819 20.8278C29.1662 20.201 29.1641 19.4145 29.1641 18.5H27.1641ZM24.1641 23.5C25.0786 23.5 25.8651 23.5021 26.4918 23.4179C27.1474 23.3297 27.7757 23.131 28.2854 22.6213L26.8712 21.2071C26.795 21.2832 26.6591 21.3774 26.2254 21.4357C25.7628 21.4979 25.1351 21.5 24.1641 21.5V23.5ZM13.4141 26.5C12.443 26.5 11.8153 26.4979 11.3528 26.4357C10.919 26.3774 10.7831 26.2832 10.707 26.2071L9.29274 27.6213C9.8024 28.131 10.4308 28.3297 11.0863 28.4179C11.713 28.5021 12.4995 28.5 13.4141 28.5V26.5ZM8.41406 23.5C8.41406 24.4145 8.41194 25.201 8.4962 25.8278C8.58433 26.4833 8.78308 27.1117 9.29274 27.6213L10.707 26.2071C10.6308 26.131 10.5367 25.995 10.4784 25.5613C10.4162 25.0988 10.4141 24.4711 10.4141 23.5H8.41406Z" fill="currentColor"/>
-                          </svg>
-                          
-              </div>
-              <h3 class="font-manrope text-2xl font-bold my-7 text-center text-indigo-600">Precision</h3>
-              <div class="flex items-center justify-center">
-                  <span class="font-manrope text-4xl font-medium text-gray-900">$1500</span>
-                  <span class="text-xl text-gray-500 ml-3">|&nbsp; An</span>
-              </div>
-          </div>
-              <!--List-->
-              <ul class="mb-12 space-y-6 text-left text-lg text-gray-600 group-hover:text-gray-900">
-                  <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Tout ce qui est inclus dans le plan Shipper, plus.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Outils d'analyse de données et de rapport.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Intégration des API de transport.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                      <!-- Icon -->
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>Gestion des performances et des indicateurs.</span>
-                  </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>Outils d'automatisation de l'expédition.</span>
-                 </li>
-                  <li class="flex items-center space-x-3.5">
-                    <!-- Icon -->
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                    <span>Jusqu'à 1 To de stockage pour les documents et fichiers.</span>
-                </li>
-                <li class="flex items-center space-x-3.5">
-                  <!-- Icon -->
-                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                  <span>200 comptes email professionnels.</span>
-                </li>
-                <li class="flex items-center space-x-3.5">
-                  <!-- Icon -->
-                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                  <span>1 domaine personnalisé avec hébergement de site avancé (jusqu'à 50 Go).</span>
-                </li>
-              </ul>
-              <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-base text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white ">Achetez Maintenant</a>
-              <!--List End-->
-          </div> 
-          </div>
-          <!--Grid End-->
-  </div>
-</section>
-                                      
-
-    <!-- ====== Section Tarification Fin -->
-
-<div class="pattern_2"></div>
-
-<!--team-->
-<section class="py-24 ">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-12">
-            <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 mb-6">Notre Équipe</h2>
-            <p class="text-lg text-gray-500 text-center">Chez Sailsmakr, nous avons réuni une équipe d'experts passionnés par la technologie, le développement de logiciels, et la résolution de problèmes complexes.
-              Notre mission est d'aider les entreprises à atteindre leurs objectifs grâce à des solutions technologiques sur mesure.</p>
-        </div>
-        <div class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full ">
-            <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div class="relative mb-5">
-                    <img src="" alt="Mahaman Abakar" class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
-                </div>
-                <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Mahaman Abakar</h4>
-                <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CEO</span>
-            </div>
-            <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div class="relative mb-5">
-                    <img src="" alt="Bader Salissou S." class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
-                </div>
-                <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Bader Salissou</h4>
-                <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CTO</span>
-            </div>
-            <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div class="relative mb-5">
-                  <img src="https://pagedone.io/asset/uploads/1698659360.png" alt="Jerome image" class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
-                </div>
-                <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Jerome Bell</h4>
-                <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CFO</span>
-            </div>
-           
-
-        </div>
-  </div>
-</section>
                                         
-<div class="pattern_1"></div>
 
+  <!-- ====== Section Tarification Fin -->
 
+  <div class="pattern_2"></div>
 
-<!---FOOTER-->
-<footer class="w-full">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!--Grid-->
-      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
-          <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-              <a href="index.html" class="flex items-center justify-center lg:justify-start space-x-2">
-                <img src="./src/img/apple-touch-icon.png" alt="Sailsmakr logo" width="50">
-                <span class="font-semibold text-lg">sailsmakr softwares LLC</span>
-              </a>
-              <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left"></p>
-              <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
-                  Contactez nous
-              </a>
+  <!--team-->
+  <section class="py-24 ">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12">
+              <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 mb-6">Notre Équipe</h2>
+              <p class="text-lg text-gray-500 text-center">Chez Sailsmakr, nous avons réuni une équipe d'experts passionnés par la technologie, le développement de logiciels, et la résolution de problèmes complexes.
+                Notre mission est d'aider les entreprises à atteindre leurs objectifs grâce à des solutions technologiques sur mesure.</p>
           </div>
-          <!--End Col-->
-          <div class="lg:mx-auto text-left ">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Sailsmakr</h4>
-              <ul class="text-sm  transition-all duration-500">
-                  <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">Accueil</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">A propos</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Facturation</a></li>
-                  <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Fonctionnalités</a></li>
-              </ul>
-          </div>
-          <!--End Col-->
-          <div class="lg:mx-auto text-left ">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Products</h4>
-              <ul class="text-sm  transition-all duration-500">
-                  <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">Uranus</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Bytesprint</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Integrations</a></li>
-                  <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Outils</a></li>
-              </ul>
-          </div>
-          <!--End Col-->
-          <div class="lg:mx-auto text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Resources</h4>
-              <ul class="text-sm  transition-all duration-500">
-                  <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">FAQs</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Quick Start</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Documentation</a></li>
-                  <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">User Guide</a></li>
-              </ul>
-          </div>
-          <!--End Col-->
-          <div class="lg:mx-auto text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Blogs</h4>
-              <ul class="text-sm  transition-all duration-500">
-                  <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">News</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Tips & Tricks</a></li>
-                  <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">New Updates</a></li>
-                  <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Events</a></li>
-              </ul>
-          </div>
-      </div>
-      <!--Grid-->
-      <div class="py-7 border-t border-gray-200">
-          <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-              <span class="text-sm text-gray-500 ">©<a href="https://www.sailsmakr.com">sailsmakr</a> 2024, All rights reserved.</span>
-              <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
-                  <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <g id="Social Media">
-                      <path id="Vector" d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z" fill="white"/>
-                      </g>
-                    </svg>
-                  </a>
-                  <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
-                      <svg class="w-[1.25rem] h-[1.125rem] text-white" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.70975 7.93663C4.70975 6.65824 5.76102 5.62163 7.0582 5.62163C8.35537 5.62163 9.40721 6.65824 9.40721 7.93663C9.40721 9.21502 8.35537 10.2516 7.0582 10.2516C5.76102 10.2516 4.70975 9.21502 4.70975 7.93663ZM3.43991 7.93663C3.43991 9.90608 5.05982 11.5025 7.0582 11.5025C9.05658 11.5025 10.6765 9.90608 10.6765 7.93663C10.6765 5.96719 9.05658 4.37074 7.0582 4.37074C5.05982 4.37074 3.43991 5.96719 3.43991 7.93663ZM9.97414 4.22935C9.97408 4.39417 10.0236 4.55531 10.1165 4.69239C10.2093 4.82946 10.3413 4.93633 10.4958 4.99946C10.6503 5.06259 10.8203 5.07916 10.9844 5.04707C11.1484 5.01498 11.2991 4.93568 11.4174 4.81918C11.5357 4.70268 11.6163 4.55423 11.649 4.39259C11.6817 4.23095 11.665 4.06339 11.6011 3.91109C11.5371 3.7588 11.4288 3.6286 11.2898 3.53698C11.1508 3.44536 10.9873 3.39642 10.8201 3.39635H10.8197C10.5955 3.39646 10.3806 3.48424 10.222 3.64043C10.0635 3.79661 9.97434 4.00843 9.97414 4.22935ZM4.21142 13.5892C3.52442 13.5584 3.15101 13.4456 2.90286 13.3504C2.57387 13.2241 2.33914 13.0738 2.09235 12.8309C1.84555 12.588 1.69278 12.3569 1.56527 12.0327C1.46854 11.7882 1.3541 11.4201 1.32287 10.7431C1.28871 10.0111 1.28189 9.79119 1.28189 7.93669C1.28189 6.08219 1.28927 5.86291 1.32287 5.1303C1.35416 4.45324 1.46944 4.08585 1.56527 3.84069C1.69335 3.51647 1.84589 3.28513 2.09235 3.04191C2.3388 2.79869 2.57331 2.64813 2.90286 2.52247C3.1509 2.42713 3.52442 2.31435 4.21142 2.28358C4.95417 2.24991 5.17729 2.24319 7.0582 2.24319C8.9391 2.24319 9.16244 2.25047 9.90582 2.28358C10.5928 2.31441 10.9656 2.42802 11.2144 2.52247C11.5434 2.64813 11.7781 2.79902 12.0249 3.04191C12.2717 3.2848 12.4239 3.51647 12.552 3.84069C12.6487 4.08513 12.7631 4.45324 12.7944 5.1303C12.8285 5.86291 12.8354 6.08219 12.8354 7.93669C12.8354 9.79119 12.8285 10.0105 12.7944 10.7431C12.7631 11.4201 12.6481 11.7881 12.552 12.0327C12.4239 12.3569 12.2714 12.5882 12.0249 12.8309C11.7784 13.0736 11.5434 13.2241 11.2144 13.3504C10.9663 13.4457 10.5928 13.5585 9.90582 13.5892C9.16306 13.6229 8.93994 13.6296 7.0582 13.6296C5.17645 13.6296 4.95395 13.6229 4.21142 13.5892ZM4.15307 1.03424C3.40294 1.06791 2.89035 1.18513 2.4427 1.3568C1.9791 1.53408 1.58663 1.77191 1.19446 2.1578C0.802277 2.54369 0.56157 2.93108 0.381687 3.38797C0.207498 3.82941 0.0885535 4.3343 0.0543922 5.07358C0.0196672 5.81402 0.0117188 6.05074 0.0117188 7.93663C0.0117188 9.82252 0.0196672 10.0592 0.0543922 10.7997C0.0885535 11.539 0.207498 12.0439 0.381687 12.4853C0.56157 12.9419 0.802334 13.3297 1.19446 13.7155C1.58658 14.1012 1.9791 14.3387 2.4427 14.5165C2.89119 14.6881 3.40294 14.8054 4.15307 14.839C4.90479 14.8727 5.1446 14.8811 7.0582 14.8811C8.9718 14.8811 9.212 14.8732 9.96332 14.839C10.7135 14.8054 11.2258 14.6881 11.6737 14.5165C12.137 14.3387 12.5298 14.1014 12.9219 13.7155C13.3141 13.3296 13.5543 12.9419 13.7347 12.4853C13.9089 12.0439 14.0284 11.539 14.062 10.7997C14.0962 10.0587 14.1041 9.82252 14.1041 7.93663C14.1041 6.05074 14.0962 5.81402 14.062 5.07358C14.0278 4.33424 13.9089 3.82913 13.7347 3.38797C13.5543 2.93135 13.3135 2.5443 12.9219 2.1578C12.5304 1.7713 12.137 1.53408 11.6743 1.3568C11.2258 1.18513 10.7135 1.06735 9.96388 1.03424C9.21256 1.00058 8.97236 0.992188 7.05876 0.992188C5.14516 0.992188 4.90479 1.00002 4.15307 1.03424Z" fill="currentColor"/>
-                          </svg>
-                          
-                  </a>
-                  <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
-                      <svg class="w-[1rem] h-[1rem] text-white" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z" fill="currentColor"/>
-                          </svg>
-                          
-                  </a>
-                  <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
-                      <svg class="w-[1.25rem] h-[0.875rem] text-white" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z" fill="currentColor"/>
-                          </svg>
-                          
-                  </a>
+          <div class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full ">
+              <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                      <img src="" alt="Mahaman Abakar" class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
+                  </div>
+                  <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Mahaman Abakar</h4>
+                  <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CEO</span>
               </div>
+              <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                      <img src="" alt="Bader Salissou S." class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
+                  </div>
+                  <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Bader Salissou</h4>
+                  <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CTO</span>
+              </div>
+              <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img src="https://pagedone.io/asset/uploads/1698659360.png" alt="Jerome image" class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"/>
+                  </div>
+                  <h4 class="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">Jerome Bell</h4>
+                  <span class="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">CFO</span>
+              </div>
+            
+
           </div>
-      </div>
-  </div>
-</footer>
-                                      
-                                      
+    </div>
+  </section>
+                                          
+  <div class="pattern_1"></div>
 
 
-<script src="./node_modules/pagedone/src/js/pagedone.js"></script>
+
+  <!---FOOTER-->
+  <footer class="w-full">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!--Grid-->
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
+            <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
+                <a href="index.html" class="flex items-center justify-center lg:justify-start space-x-2">
+                  <img src="./src/img/apple-touch-icon.png" alt="Sailsmakr logo" width="50">
+                  <span class="font-semibold text-lg">sailsmakr softwares LLC</span>
+                </a>
+                <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left"></p>
+                <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
+                    Contactez nous
+                </a>
+            </div>
+            <!--End Col-->
+            <div class="lg:mx-auto text-left ">
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Sailsmakr</h4>
+                <ul class="text-sm  transition-all duration-500">
+                    <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">Accueil</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">A propos</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Facturation</a></li>
+                    <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Fonctionnalités</a></li>
+                </ul>
+            </div>
+            <!--End Col-->
+            <div class="lg:mx-auto text-left ">
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Products</h4>
+                <ul class="text-sm  transition-all duration-500">
+                    <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">Uranus</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Bytesprint</a></li>
+                    <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">CloudSquish</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Integrations</a></li>
+                </ul>
+            </div>
+            <!--End Col-->
+            <div class="lg:mx-auto text-left">
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Resources</h4>
+                <ul class="text-sm  transition-all duration-500">
+                    <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">FAQs</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Quick Start</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Documentation</a></li>
+                    <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">User Guide</a></li>
+                </ul>
+            </div>
+            <!--End Col-->
+            <div class="lg:mx-auto text-left">
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Blogs</h4>
+                <ul class="text-sm  transition-all duration-500">
+                    <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">News</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Tips & Tricks</a></li>
+                    <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">New Updates</a></li>
+                    <li><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Grid-->
+        <div class="py-7 border-t border-gray-200">
+            <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
+                <span class="text-sm text-gray-500 ">©<a href="https://www.sailsmakr.com">sailsmakr</a> 2024, All rights reserved.</span>
+                <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
+                    <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g id="Social Media">
+                        <path id="Vector" d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z" fill="white"/>
+                        </g>
+                      </svg>
+                    </a>
+                    <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
+                        <svg class="w-[1.25rem] h-[1.125rem] text-white" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.70975 7.93663C4.70975 6.65824 5.76102 5.62163 7.0582 5.62163C8.35537 5.62163 9.40721 6.65824 9.40721 7.93663C9.40721 9.21502 8.35537 10.2516 7.0582 10.2516C5.76102 10.2516 4.70975 9.21502 4.70975 7.93663ZM3.43991 7.93663C3.43991 9.90608 5.05982 11.5025 7.0582 11.5025C9.05658 11.5025 10.6765 9.90608 10.6765 7.93663C10.6765 5.96719 9.05658 4.37074 7.0582 4.37074C5.05982 4.37074 3.43991 5.96719 3.43991 7.93663ZM9.97414 4.22935C9.97408 4.39417 10.0236 4.55531 10.1165 4.69239C10.2093 4.82946 10.3413 4.93633 10.4958 4.99946C10.6503 5.06259 10.8203 5.07916 10.9844 5.04707C11.1484 5.01498 11.2991 4.93568 11.4174 4.81918C11.5357 4.70268 11.6163 4.55423 11.649 4.39259C11.6817 4.23095 11.665 4.06339 11.6011 3.91109C11.5371 3.7588 11.4288 3.6286 11.2898 3.53698C11.1508 3.44536 10.9873 3.39642 10.8201 3.39635H10.8197C10.5955 3.39646 10.3806 3.48424 10.222 3.64043C10.0635 3.79661 9.97434 4.00843 9.97414 4.22935ZM4.21142 13.5892C3.52442 13.5584 3.15101 13.4456 2.90286 13.3504C2.57387 13.2241 2.33914 13.0738 2.09235 12.8309C1.84555 12.588 1.69278 12.3569 1.56527 12.0327C1.46854 11.7882 1.3541 11.4201 1.32287 10.7431C1.28871 10.0111 1.28189 9.79119 1.28189 7.93669C1.28189 6.08219 1.28927 5.86291 1.32287 5.1303C1.35416 4.45324 1.46944 4.08585 1.56527 3.84069C1.69335 3.51647 1.84589 3.28513 2.09235 3.04191C2.3388 2.79869 2.57331 2.64813 2.90286 2.52247C3.1509 2.42713 3.52442 2.31435 4.21142 2.28358C4.95417 2.24991 5.17729 2.24319 7.0582 2.24319C8.9391 2.24319 9.16244 2.25047 9.90582 2.28358C10.5928 2.31441 10.9656 2.42802 11.2144 2.52247C11.5434 2.64813 11.7781 2.79902 12.0249 3.04191C12.2717 3.2848 12.4239 3.51647 12.552 3.84069C12.6487 4.08513 12.7631 4.45324 12.7944 5.1303C12.8285 5.86291 12.8354 6.08219 12.8354 7.93669C12.8354 9.79119 12.8285 10.0105 12.7944 10.7431C12.7631 11.4201 12.6481 11.7881 12.552 12.0327C12.4239 12.3569 12.2714 12.5882 12.0249 12.8309C11.7784 13.0736 11.5434 13.2241 11.2144 13.3504C10.9663 13.4457 10.5928 13.5585 9.90582 13.5892C9.16306 13.6229 8.93994 13.6296 7.0582 13.6296C5.17645 13.6296 4.95395 13.6229 4.21142 13.5892ZM4.15307 1.03424C3.40294 1.06791 2.89035 1.18513 2.4427 1.3568C1.9791 1.53408 1.58663 1.77191 1.19446 2.1578C0.802277 2.54369 0.56157 2.93108 0.381687 3.38797C0.207498 3.82941 0.0885535 4.3343 0.0543922 5.07358C0.0196672 5.81402 0.0117188 6.05074 0.0117188 7.93663C0.0117188 9.82252 0.0196672 10.0592 0.0543922 10.7997C0.0885535 11.539 0.207498 12.0439 0.381687 12.4853C0.56157 12.9419 0.802334 13.3297 1.19446 13.7155C1.58658 14.1012 1.9791 14.3387 2.4427 14.5165C2.89119 14.6881 3.40294 14.8054 4.15307 14.839C4.90479 14.8727 5.1446 14.8811 7.0582 14.8811C8.9718 14.8811 9.212 14.8732 9.96332 14.839C10.7135 14.8054 11.2258 14.6881 11.6737 14.5165C12.137 14.3387 12.5298 14.1014 12.9219 13.7155C13.3141 13.3296 13.5543 12.9419 13.7347 12.4853C13.9089 12.0439 14.0284 11.539 14.062 10.7997C14.0962 10.0587 14.1041 9.82252 14.1041 7.93663C14.1041 6.05074 14.0962 5.81402 14.062 5.07358C14.0278 4.33424 13.9089 3.82913 13.7347 3.38797C13.5543 2.93135 13.3135 2.5443 12.9219 2.1578C12.5304 1.7713 12.137 1.53408 11.6743 1.3568C11.2258 1.18513 10.7135 1.06735 9.96388 1.03424C9.21256 1.00058 8.97236 0.992188 7.05876 0.992188C5.14516 0.992188 4.90479 1.00002 4.15307 1.03424Z" fill="currentColor"/>
+                            </svg>
+                            
+                    </a>
+                    <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
+                        <svg class="w-[1rem] h-[1rem] text-white" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z" fill="currentColor"/>
+                            </svg>
+                            
+                    </a>
+                    <a href="javascript:;"  class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">
+                      <svg class="w-[1.25rem] h-[0.875rem] text-white" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z" fill="currentColor"/>
+                      </svg>      
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+                                        
+                                        
+
+
+  <script src="./node_modules/pagedone/src/js/pagedone.js"></script>
 
 </body>
 </html>
