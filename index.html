@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Sailsmakr</title>
+    <meta name="description" content="Sailsmakr – Plateforme de gestion spécialisée pour la logistique, l’éducation, l’ingénierie et le cloud.">
+    <meta name="keywords" content="sailsmakr, logistique, ingénierie, éducation, cloud, outils numériques, SaaS">
+    <meta name="author" content="Sailsmakr">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/brand/sailsmakr.png">
+  
+    <!-- Open Graph pour réseaux sociaux -->
+    <meta property="og:title" content="Sailsmakr">
+    <meta property="og:description" content="Optimisez vos processus métiers avec Sailsmakr.">
+    <meta property="og:image" content="./assets/brand/sailsmakr.png">
+    <meta property="og:url" content="https://votre-domaine.com">
+    <meta name="twitter:card" content="summary_large_image">
+  
+    <!-- Préchargement des polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+    <!-- CSS - Loadé proprement -->
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/soft-design-system.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  
+    <!-- Optionnel : Animation ou AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> -->
+  
+    <!-- JS Bootstrap si besoin en bas du body ou ici async -->
+    <!-- <script src="./assets/js/bootstrap.bundle.min.js" defer></script> -->
+  
+  </head>
+  
+<style>
+    .bg-gradient-primary, .text-gradient {background-image: linear-gradient(310deg, #7928ca, #ff0080);}
+
+        /* Section hero */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 75vh;  /* Ajuste si nécessaire */
+      position: relative;
+      padding-top: 4rem; /* Ajoute de l'espace pour la navbar */
+      text-align: center;
+    }
+
+    /* Responsive mobile */
+    @media (max-width: 768px) {
+      .page-header {
+        padding-top: 6rem; /* Plus d'espace pour le mobile */
+      }
+    }
+
+    .modal-content {
+      border-radius: 8px;
+    }
+    .modal-header {
+      background-color: #0056b3;
+      color: white;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .modal-footer {
+      border-top: 1px solid #ddd;
+    }
+
+</style>
+<body>
+    
+    <nav class="navbar navbar-expand-lg   position-absolute-fixed  py-2 fixed-top  blur blur-rounded-0">
+        <div class="container-fluid">
+          <!-- Logo et Nom du site -->
+          <a class="navbar-brand font-weight-bold" href="acceuil.html">
+            <img src="../sailsmakr/assets/brand/sailsmakr.svg" width="25" height="25" alt="">
+            Sailsmakr
+          </a>
+          
+          <!-- Menu Toggle pour mobile -->
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+          
+          <!-- Menu de Navigation -->
+          <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+            <ul class="navbar-nav navbar-nav-hover w-100">
+      
+              <!-- Accueil -->
+              <li class="nav-item mx-2">
+                <a class="nav-link ps-2" href="acceuil.html">Accueil</a>
+              </li>
+      
+              <!-- Solutions Dropdown (Logistique, Éducation, Ingénierie) -->
+              <li class="nav-item dropdown dropdown-hover mx-2">
+                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownSolutions" data-bs-toggle="dropdown" aria-expanded="false">
+                  Solutions
+                  <img src="../sailsmakr/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownSolutions">
+                    <li style="display: flex; align-items: center;">
+                        <a class="dropdown-item py-2 ps-3" href="logistique.html">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg" style="background-image: linear-gradient(310deg, #7928ca, #ff0080); padding: 4; border-radius:8px">
+                                <path fill="#ffff" d="M3 3h13v5h5v8h-1a2 2 0 1 1-4 0H8a2 2 0 1 1-4 0H3V3zm15 6h-4V5h-2v9h6V9zm-9 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm10 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+                            </svg>                              
+                            Logistique
+                        </a>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <a class="dropdown-item py-2 ps-3" href="education.html">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-image: linear-gradient(310deg, #7928ca, #ff0080); padding: 4; border-radius:8px">
+                                <path fill="#ffff" d="M4 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16V2zm14 16H4V4h14z"/>
+                            </svg>
+                            
+                            Education
+                        </a>
+                    </li>
+
+                    <li style="display: flex; align-items: center;">
+                        <a class="dropdown-item py-2 ps-3" href="ingenierie.html">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-image: linear-gradient(310deg, #7928ca, #ff0080); padding: 4; border-radius:8px">
+                                <path fill="#ffff" d="M12 2a1 1 0 0 1 .993.883L13 3v1.05a7.001 7.001 0 0 1 3.357 1.367l.72-.72a1 1 0 0 1 1.497 1.32l-.084.094-.72.72A7.001 7.001 0 0 1 19.95 11H21a1 1 0 0 1 .993.883L22 12a1 1 0 0 1-.883.993L21 13h-1.05a7.001 7.001 0 0 1-1.367 3.357l.72.72a1 1 0 0 1-1.32 1.497l-.094-.084-.72-.72A7.001 7.001 0 0 1 13 19.95V21a1 1 0 0 1-.883.993L12 22a1 1 0 0 1-.993-.883L11 21v-1.05a7.001 7.001 0 0 1-3.357-1.367l-.72.72a1 1 0 0 1-1.497-1.32l.084-.094.72-.72A7.001 7.001 0 0 1 4.05 13H3a1 1 0 0 1-.993-.883L2 12a1 1 0 0 1 .883-.993L3 11h1.05a7.001 7.001 0 0 1 1.367-3.357l-.72-.72a1 1 0 0 1 1.32-1.497l.094.084.72.72A7.001 7.001 0 0 1 11 4.05V3a1 1 0 0 1 .883-.993L12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+                            </svg>
+                            Ingénierie
+                        </a>
+                    </li>
+                </ul>
+              </li>
+      
+              <!-- Fonctionnalités -->
+              <li class="nav-item mx-2">
+                <a class="nav-link ps-2" href="#fonctionnalites">Fonctionnalités</a>
+              </li>
+      
+              <!-- cloud -->
+              <li class="nav-item mx-2">
+                <a class="nav-link ps-2" href="cloud.html">Cloud</a>
+              </li>
+      
+              <!-- Ressources Dropdown (Blog, FAQ, Études de cas) -->
+              <li class="nav-item dropdown dropdown-hover mx-2">
+                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownRessources" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ressources
+                  <img src="../sailsmakr/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownRessources">
+                    <li style="display: flex; align-items: center;">
+                        <a class="dropdown-item py-2 ps-3" href="#faq">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-image: linear-gradient(310deg, #7928ca, #ff0080); padding: 4; border-radius:8px">
+                                <path fill="#ffff" d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 16h-2v-2h2v2zm0-4h-2v-4h2v4zm0-6h-2V6h2v2z"/>
+                            </svg>
+                            FAQ
+                        </a>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                      <a class="dropdown-item py-2 ps-3" href="contact.html">
+                          <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-image: linear-gradient(310deg, #7928ca, #ff0080); padding: 4; border-radius:8px">
+                              <path fill="#ffff" d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 16h-2v-2h2v2zm0-4h-2v-4h2v4zm0-6h-2V6h2v2z"/>
+                          </svg>
+                          Contact / Demo
+                      </a>
+                  </li>
+                </ul>
+              </li>
+      
+            
+              <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center ms-lg-auto w-100 w-lg-auto">
+                <li class="nav-item w-100 w-lg-auto mb-2 mb-lg-0">
+                  <a class="btn btn-sm btn-dark btn-round w-100 w-lg-auto me-lg-3" href="#">Se connecter</a>
+                </li>
+                <li class="nav-item w-100 w-lg-auto">
+                  <a class="btn btn-sm bg-gradient-primary btn-round w-100 w-lg-auto" href="#">S'inscrire</a>
+                </li>
+              </ul>
+                            
+      
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- section hero -->
+<header class="header-2">
+  <div class="page-header min-vh-75 relative d-flex align-items-center justify-content-center" style="background-image: linear-gradient(310deg, #7928ca, #ff0080, #00bcd4);">
+    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px); z-index: -1;"></div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mx-auto my-auto">
+          <h2 class="text-white">Optimisez vos opérations avec des outils spécialisés et automatisés</h2>
+          <p class="lead mb-4 text-white opacity-8">
+            Sailsmakr simplifie les processus internes des entreprises en proposant des outils ciblés — sans complexité inutile, juste de l’efficacité.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Final -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10 text-center">
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="btn btn-lg btn-white text-dark px-4">Essai Gratuit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vagues animées -->
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="moving-waves">
+          <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+          <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+          <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95)" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="py-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2 class="mb-0">Nos solutions</h2>
+        <h2 class="text-gradient mb-3">Logistique, Éducation, Ingénierie</h2>
+      </div>
+    </div>
+
+    <div class="row mt-6">
+      <!-- Carte Logistique -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-lg border-0 rounded-lg overflow-hidden">
+          <div class="card-body text-center">
+            <div class="icon mb-4" style="background: linear-gradient(310deg, #7928ca, #ff0080); padding: 20px; border-radius: 50%; display: inline-block;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff" d="M3 3h13v5h5v8h-1a2 2 0 1 1-4 0H8a2 2 0 1 1-4 0H3V3zm15 6h-4V5h-2v9h6V9zm-9 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm10 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+              </svg>
+            </div>
+            <h5 class="font-weight-bold">Logistique</h5>
+            <p class="mt-3">Outils de génération et d’archivage de documents pour les agences de transport maritime</p>
+            <a href="logistique.html" class="text-gradient">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte Éducation -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-lg bg-gradient-primary text-white border-0 rounded-lg overflow-hidden">
+          <div class="card-body text-center">
+            <div class="icon mb-4" style="background: linear-gradient(310deg, #7928ca, #ff0080); padding: 20px; border-radius: 50%; display: inline-block;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff" d="M4 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16V2zm14 16H4V4h14z"/>
+              </svg>
+            </div>
+            <h5 class="font-weight-bold text-white">Éducation</h5>
+            <p class="mt-3">Automatisation des processus administratifs pour écoles et universités</p>
+            <a href="education.html" class="text-light">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte Ingénierie -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-lg border-0 rounded-lg overflow-hidden">
+          <div class="card-body text-center">
+            <div class="icon mb-4" style="background: linear-gradient(310deg, #7928ca, #ff0080); padding: 20px; border-radius: 50%; display: inline-block;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff" d="M12 2a1 1 0 0 1 .993.883L13 3v1.05a7.001 7.001 0 0 1 3.357 1.367l.72-.72a1 1 0 0 1 1.497 1.32l-.084.094-.72.72A7.001 7.001 0 0 1 19.95 11H21a1 1 0 0 1 .993.883L22 12a1 1 0 0 1-.883.993L21 13h-1.05a7.001 7.001 0 0 1-1.367 3.357l.72.72a1 1 0 0 1-1.32 1.497l-.094-.084-.72-.72A7.001 7.001 0 0 1 13 19.95V21a1 1 0 0 1-.883.993L12 22a1 1 0 0 1-.993-.883L11 21v-1.05a7.001 7.001 0 0 1-3.357-1.367l-.72.72a1 1 0 0 1-1.497-1.32l.084-.094.72-.72A7.001 7.001 0 0 1 4.05 13H3a1 1 0 0 1-.993-.883L2 12a1 1 0 0 1 .883-.993L3 11h1.05a7.001 7.001 0 0 1 1.367-3.357l-.72-.72a1 1 0 0 1 1.32-1.497l.094.084.72.72A7.001 7.001 0 0 1 11 4.05V3a1 1 0 0 1 .883-.993L12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <h5 class="font-weight-bold">Ingénierie</h5>
+            <p class="mt-3">Optimisation des flux internes pour la gestion de projets et de la conformité</p>
+            <a href="ingenierie.html" class="text-gradient">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <hr class="horizontal dark my-5">
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-6 ms-auto">
+        <img class="w-100 opacity-6" src=".//assets/img/logos/gray-logos/logo-apple.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-nasa.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-vodafone.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-digitalocean.svg" alt="Logo">
+      </div>
+    </div>
+  </div>
+</section>
+  
+    <!-- -------- START Content Presentation Docs ------- -->
+  <div class="container mt-sm-3">
+    <div class="page-header min-vh-50 my-sm-3 mb-3 border-radius-xl shadow-lg" style="background-image: url('../sailsmakr/assets/img/hero.jpg'); background-size: cover; background-position: center;">
+      <span class="mask bg-gradient-dark opacity-75 border-radius-xl"></span>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-lg-7 ms-lg-5 text-white" data-aos="fade-right">
+            <h4 class="text-light mb-0">Technologie intelligente, résultats concrets</h4>
+            <h1 class="text-white display-5 fw-bold">Fonctionnalités Clés</h1>
+            <p class="mt-3 lead text-white opacity-9">
+              Découvrez les fonctionnalités essentielles qui propulsent votre efficacité — de l'automatisation à la gestion intelligente de vos données.
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="row mt-5">
+      <!-- Carte 1 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-0 shadow-lg h-100 text-white bg-gradient-primary p-4 rounded-4">
+          <div class="d-flex align-items-center">
+            <div class="bg-white text-gradient rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <svg width="28px" height="28px" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm9.93 3.36-2.01-.75a7.03 7.03 0 0 0-.54-1.29l.97-1.88a1 1 0 0 0-.28-1.25l-1.42-1.42a1 1 0 0 0-1.25-.28l-1.88.97a7.03 7.03 0 0 0-1.29-.54l-.75-2.01A1 1 0 0 0 12 2h-2a1 1 0 0 0-1 .76l-.75 2.01a7.03 7.03 0 0 0-1.29.54l-1.88-.97a1 1 0 0 0-1.25.28L2.6 5.5a1 1 0 0 0-.28 1.25l.97 1.88a7.03 7.03 0 0 0-.54 1.29l-2.01.75A1 1 0 0 0 0 12v2a1 1 0 0 0 .76 1l2.01.75c.14.45.32.88.54 1.29l-.97 1.88a1 1 0 0 0 .28 1.25l1.42 1.42a1 1 0 0 0 1.25.28l1.88-.97c.41.22.84.4 1.29.54l.75 2.01A1 1 0 0 0 10 24h2a1 1 0 0 0 1-.76l.75-2.01c.45-.14.88-.32 1.29-.54l1.88.97a1 1 0 0 0 1.25-.28l1.42-1.42a1 1 0 0 0 .28-1.25l-.97-1.88c.22-.41.4-.84.54-1.29l2.01-.75A1 1 0 0 0 24 14v-2a1 1 0 0 0-.76-1l-.31-.64ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/>
+              </svg>
+            </div>
+            <div class="ms-4">
+              <h5 class="mb-0 text-white">Automatisation intelligente</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Carte 2 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-0 shadow-lg h-100 p-4 rounded-4 bg-white">
+          <div class="d-flex align-items-center">
+            <div class="bg-gradient-primary text-white rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <svg width="28px" height="28px" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.944 10.112a5.997 5.997 0 0 0-11.51-2.037A4.5 4.5 0 0 0 6 19h12a4 4 0 0 0 .944-8.888ZM19 17H6a2.5 2.5 0 1 1 .455-4.956l.94.174.162-.94A4 4 0 0 1 16.817 9.99l.622.84.997-.129A2.001 2.001 0 0 1 19 17Z"/>
+                <path d="M12 13v4m0 0-2-2m2 2 2-2"/>
+              </svg>
+            </div>
+            <div class="ms-4">
+              <h5 class="mb-0">Intégrations Cloud</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Carte 3 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-0 shadow-lg h-100 p-4 rounded-4 bg-white">
+          <div class="d-flex align-items-center">
+            <div class="bg-gradient-info text-white rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <svg width="28px" height="28px" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-6v2h2a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h2v-2H4a1 1 0 0 1-1-1V4Zm2 1v12h14V5H5Zm2 2h5v2H7V7Zm0 4h10v2H7v-2Z"/>
+              </svg>
+            </div>
+            <div class="ms-4">
+              <h5 class="mb-0">Interface simple, sans surcharge</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <hr class="horizontal dark my-5">
+  
+  <section class="pt-4 mt-5 pb-6 bg-white-100" id="count-stats">
+    <div class="container p-2">
+      <div class="row mt-3">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2 class="mb-0 text-gradient"> Comment ça marche ?</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center mt-4">
+        <!-- Étape 1 -->
+        <div class="col-md-3">
+          <div class="mb-3">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" class="text-info">
+              <path d="M12 2L15 8H9L12 2ZM2 12L8 15V9L2 12ZM12 22L9 16H15L12 22ZM22 12L16 15V9L22 12Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h5>Choisissez vos outils</h5>
+        </div>
+  
+        <!-- Étape 2 -->
+        <div class="col-md-3">
+          <div class="mb-3">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" class="text-info">
+              <path d="M4 4H20V6H4V4ZM4 9H20V11H4V9ZM4 14H14V16H4V14ZM4 19H14V21H4V19Z" fill="currentColor"/>
+              <circle cx="19" cy="17" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h5>Automatisez & Optimisez</h5>
+        </div>
+  
+        <!-- Étape 3 -->
+        <div class="col-md-3">
+          <div class="mb-3">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" class="text-info">
+              <path d="M2 16L12 2L22 16H13V22H11V16H2Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h5>Évoluez avec sérénité</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <hr class="horizontal dark mb-5">
+    <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
+    <section class="position-relative py-6 bg-gray-100 overflow-hidden">
+      <!-- Dégradé vers le haut -->
+      <div class="position-absolute top-0 start-0 w-100" style="height: 100px; background: linear-gradient(to top, rgba(248,249,250,0), #ffffff); z-index: 1;"></div>
+    
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-2">Témoignages / Études de cas</h2>
+            <p class="text-muted">Découvrez ce que nos utilisateurs disent de nous</p>
+          </div>
+        </div>
+    
+        <!-- Carousel -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+          <div class="carousel-inner">
+    
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <div class="card flex-grow-1 shadow-sm border-0" style="max-width: 300px;">
+                  <div class="card-body d-flex">
+                    <img src="https://i.pravatar.cc/80?img=1" class="rounded-circle me-3" width="60" height="60" alt="avatar">
+                    <div>
+                      <h6 class="mb-0">Ivana Flow</h6>
+                      <small class="text-muted">Athlète</small>
+                      <p class="mt-2 mb-0 text-sm">“Une solution simple et intuitive. J’ai pu automatiser mes processus en un rien de temps.”</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card flex-grow-1 shadow-sm border-0" style="max-width: 300px;">
+                  <div class="card-body d-flex">
+                    <img src="https://i.pravatar.cc/80?img=2" class="rounded-circle me-3" width="60" height="60" alt="avatar">
+                    <div>
+                      <h6 class="mb-0">Sophia Garcia</h6>
+                      <small class="text-muted">Dév. JS</small>
+                      <p class="mt-2 mb-0 text-sm">“Les intégrations cloud sont hyper fluides. Mon équipe a gagné en productivité.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <div class="card flex-grow-1 shadow-sm border-0" style="max-width: 300px;">
+                  <div class="card-body d-flex">
+                    <img src="https://i.pravatar.cc/80?img=3" class="rounded-circle me-3" width="60" height="60" alt="avatar">
+                    <div>
+                      <h6 class="mb-0">Liam Nouri</h6>
+                      <small class="text-muted">Ingénieur IT</small>
+                      <p class="mt-2 mb-0 text-sm">“Une interface claire, même mes collègues non-tech ont pu s’y mettre.”</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card flex-grow-1 shadow-sm border-0" style="max-width: 300px;">
+                  <div class="card-body d-flex">
+                    <img src="https://i.pravatar.cc/80?img=4" class="rounded-circle me-3" width="60" height="60" alt="avatar">
+                    <div>
+                      <h6 class="mb-0">Yassine M.</h6>
+                      <small class="text-muted">Responsable logistique</small>
+                      <p class="mt-2 mb-0 text-sm">“Avec cette plateforme, notre gestion interne est passée à la vitesse supérieure.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Ajoute d'autres slides si nécessaire -->
+    
+          </div>
+    
+          <!-- Boutons de contrôle -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="fonctionnalites" class="py-5">
+      <hr class="horizontal dark mb-5">
+      <div class="container text-center">
+        <h2 class="mb-5">Nos Fonctionnalités</h2>
+        <div class="row">
+          <!-- Module 1 -->
+          <div class="col-md-4">
+            <div class="feature-card">
+              <svg width="50" height="50" fill="#5e72e4" viewBox="0 0 24 24">
+                <path d="M10 3H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-4l-2-2H10z"/>
+              </svg>
+              <h5>Automatisation des Documents</h5>
+              <p>Générez automatiquement vos rapports, contrats, et documents essentiels.</p>
+            </div>
+          </div>
+          <!-- Module 2 -->
+          <div class="col-md-4">
+            <div class="feature-card">
+              <svg width="50" height="50" fill="#5e72e4" viewBox="0 0 24 24">
+                <path d="M20.285 6.709a1 1 0 00-1.414-1.418l-9.193 9.193-4.243-4.243a1 1 0 00-1.414 1.414l4.95 4.95a1 1 0 001.414 0l9.9-9.896z"/>
+              </svg>
+              <h5>Archivage Automatisé</h5>
+              <p>Stockez vos documents de manière sécurisée et simplifiée.</p>
+            </div>
+          </div>
+          <!-- Module 3 -->
+          <div class="col-md-4">
+            <div class="feature-card">
+              <svg width="50" height="50" fill="#5e72e4" viewBox="0 0 24 24">
+                <path d="M3 8h18v10H3z"/>
+              </svg>
+              <h5>Tableaux de Bord Interactifs</h5>
+              <p>Suivez vos opérations en temps réel grâce à nos dashboards dynamiques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<hr class="horizontal dark mb-5">
+<section id="faq" class="pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center text-gradient">Foire aux Questions (FAQ)</h2>
+        <p class="text-center mb-5">Trouvez des réponses aux questions fréquentes concernant nos services, solutions, et plus encore.</p>
+      </div>
+      <div class="col-md-8 mx-auto">
+        <div class="accordion" id="faqAccordion">
+          
+          <!-- Question 1 -->
+          <div class="accordion-item shadow-lg border rounded-4 mb-2">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Qu'est-ce que Sailsmakr ?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sailsmakr est une plateforme d'automatisation spécialisée pour les secteurs de la logistique, de l'éducation et de l'ingénierie. Elle aide à optimiser les processus métier, simplifier la gestion documentaire et améliorer l'efficacité des équipes.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="accordion-item shadow-lg border rounded-4 mb-2">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Comment Sailsmakr améliore-t-il l'automatisation ?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Grâce à des fonctionnalités d'automatisation intelligentes, Sailsmakr permet d'optimiser les flux de travail, d'intégrer des outils de gestion et d'automatiser des tâches répétitives, offrant ainsi un gain de temps et une réduction des erreurs humaines.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="accordion-item shadow-lg border rounded-4 shadow-lg border rounded-4 mb-2">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Est-ce que Sailsmakr s'intègre avec d'autres outils ?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Oui, Sailsmakr offre des intégrations avec des outils tiers populaires tels que les ERP, CRM, et des plateformes de gestion documentaire. Des API sont également disponibles pour des intégrations personnalisées.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="accordion-item shadow-lg border rounded-4">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Comment puis-je commencer avec Sailsmakr ?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Il vous suffit de vous inscrire sur notre site et de demander une démo ou un essai gratuit pour découvrir comment Sailsmakr peut transformer vos processus d'affaires. Vous aurez également accès à nos ressources pour une prise en main rapide.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="accordion-item shadow-lg border rounded-4 mt-2">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Quels sont les tarifs de Sailsmakr ?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sailsmakr propose plusieurs plans tarifaires adaptés aux besoins des petites, moyennes et grandes entreprises. Vous pouvez consulter notre page des tarifs pour choisir celui qui correspond à vos besoins.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+<section class="py-5 bg-gray-100 mt-2">
+  <div class="container text-center">
+    <h3>À qui cela s’adresse ?</h3>
+    <p class="lead">Nos solutions sont idéales pour les PME, Startups, Institutions et entreprises de toutes tailles.</p>
+  </div>
+</section>
+<!-- Modal Politique de Confidentialité -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-primary">
+        <h5 class="modal-title text-white" id="privacyPolicyModalLabel">🛡️ Politique de Confidentialité</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Dernière mise à jour :</strong> [Date à insérer]</p>
+
+        <p>Chez <strong>Sailsmakr</strong>, nous attachons une grande importance à la confidentialité de vos données. Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons les informations personnelles que vous nous fournissez lorsque vous utilisez notre site web.</p>
+
+        <h5>1. Données collectées</h5>
+        <p>Nous pouvons collecter les types de données suivants :</p>
+        <ul>
+          <li><strong>Informations personnelles :</strong> nom, prénom, e-mail, numéro de téléphone lorsque vous remplissez un formulaire de contact ou créez un compte.</li>
+          <li><strong>Données techniques :</strong> adresse IP, navigateur, pages visitées, durée de visite (via cookies ou outils d’analyse).</li>
+          <li><strong>Utilisation du service :</strong> préférences, navigation, et interactions avec la plateforme.</li>
+        </ul>
+
+        <h5>2. Finalité de la collecte</h5>
+        <p>Vos données sont utilisées pour :</p>
+        <ul>
+          <li>Fournir nos services (hébergement cloud, automatisation, etc.)</li>
+          <li>Répondre à vos demandes via notre formulaire de contact</li>
+          <li>Améliorer l'expérience utilisateur sur le site</li>
+          <li>Réaliser des statistiques anonymes pour améliorer la plateforme</li>
+        </ul>
+
+        <h5>3. Partage des données</h5>
+        <p>Vos données ne sont jamais vendues. Elles peuvent être partagées avec des prestataires techniques ou partenaires de confiance uniquement dans le cadre du fonctionnement du service.</p>
+
+        <h5>4. Sécurité</h5>
+        <p>Nous utilisons des mesures de sécurité (chiffrement, hébergement sécurisé, pare-feu) pour protéger vos données.</p>
+
+        <h5>5. Vos droits</h5>
+        <p>Conformément à la réglementation en vigueur (RGPD), vous disposez des droits suivants :</p>
+        <ul>
+          <li>Accès à vos données</li>
+          <li>Rectification ou suppression</li>
+          <li>Limitation ou opposition au traitement</li>
+          <li>Portabilité des données</li>
+        </ul>
+        <p>Pour exercer ces droits, contactez-nous à l’adresse : <strong>[ton-email@tonsite.com]</strong></p>
+
+        <h5>6. Cookies</h5>
+        <p>Notre site utilise des cookies pour améliorer l’expérience utilisateur. Vous pouvez configurer vos préférences dans les paramètres de votre navigateur.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal" onclick="handleAccept()">Lu et accepté</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer pt-5 mt-3">
+  <hr class="horizontal dark mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4 ms-auto">
+        <div class="d-flex">
+          <img src="../sailsmakr/assets/brand/sailsmakr.svg" class="me-2" width="25" height="25" alt="">
+          <h6 class="text-dark font-weight-bolder">Sailsmakr</h6>
+        </div>
+        <p class="text-sm">
+          Optimisez vos processus avec des outils spécialisés et automatisés pour les secteurs de la logistique, de l'éducation, de l'ingénierie et du cloud.
+        </p>
+        <button class="btn btn-link" onclick="reopenPrivacy()">Revoir la politique de confidentialité</button>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <h6 class="text-gradient text-sm">Navigation</h6>
+        <ul class="flex-column ms-n3 nav">
+          <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="acceuil.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="cloud.html">Cloud</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <h6 class="text-gradient text-sm">Ressources</h6>
+        <ul class="flex-column ms-n3 nav">
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
+        <h6 class="text-gradient text-sm">Légal</h6>
+        <ul class="flex-column ms-n3 nav">
+          <li class="nav-item"><a class="nav-link" href="#">Mentions légales</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 text-center">
+        <p class="my-4 text-sm">
+          © <script>document.write(new Date().getFullYear())</script> Sailsmakr. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>        
+      
+  <script src="../sailsmakr/assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../sailsmakr/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+  <script src="../sailsmakr/assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../sailsmakr/assets/js/plugins/prism.min.js"></script>
+
+  <script src="../../assets/js/plugins/parallax.min.js"></script>
+  <script src="../sailsmakr/assets/js/soft-design-system.min.js" type="text/javascript"></script>
+
+  <script>
+    if (document.getElementById('typed')) {
+      var typed = new Typed("#typed", {
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        backSpeed: 50,
+        backDelay: 200,
+        startDelay: 500,
+        loop: true
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      // On affiche le modal seulement si l'utilisateur n'a pas encore accepté
+      if (!localStorage.getItem("privacyAccepted")) {
+        const myModal = new bootstrap.Modal(document.getElementById('privacyPolicyModal'));
+        myModal.show();
+      }
+    }, 10000); // 10 secondes
+  });
+
+  function handleAccept() {
+    // On enregistre que l'utilisateur a accepté
+    localStorage.setItem("privacyAccepted", "true");
+    console.log("Politique de confidentialité acceptée.");
+  }
+
+  function reopenPrivacy() {
+    // On affiche juste le modal, sans supprimer l'acceptation
+    const modal = new bootstrap.Modal(document.getElementById('privacyPolicyModal'));
+    modal.show();
+  }
+
+  </script>
+
+</body>
+</html>
